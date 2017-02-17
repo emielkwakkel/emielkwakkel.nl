@@ -1,6 +1,28 @@
-<ul>
-  <li><a [routerLink]="['/home']">Home</a></li>
-  <li><a [routerLink]="['/about']">About</a></li>
-  <li><a [routerLink]="['/contact']">Contact</a></li>
-  <li><a [routerLink]="['/mission']">Mission</a></li>
-</ul>
+<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+  <ul class="nav">
+    <li>
+      <a [routerLink]="['/home']">
+        <span class="glyphicon glyphicon-home right" aria-hidden="true"></span>
+        Home
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/about']">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        About
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/contact']">
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+        Contact
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mission']">
+        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        Mission
+      </a>
+    </li>
+  </ul>
+</nav>
