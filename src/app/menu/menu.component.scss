@@ -1,5 +1,11 @@
-a {
-  padding: 30px 15px !important;
+.nav>li>a {
+  padding: 30px 15px;
   border-bottom: 1px solid #222;
   color: #fff;
+  span {
+    margin: 0 10px 0 0;
+  }
+  &:hover {
+    background: #222;
+  }
 }
