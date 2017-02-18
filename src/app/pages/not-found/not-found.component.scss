@@ -1,0 +1,22 @@
+article {
+  div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;
+    position: absolute;
+    h1 {
+    }
+    p, h1 {
+      text-align: center;
+    }
+  }
+  i {
+    font-size: 170px;
+    padding: 50px 0 0 0;
+  }
+
+}
