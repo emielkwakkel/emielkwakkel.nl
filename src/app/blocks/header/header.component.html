@@ -1,8 +1,15 @@
-<header id="top" class="hidden-sm">
-<span class="glyphicon glyphicon-menu-hamburger"></span>
+<header id="top"
+        class="hidden-sm"
+        [ngClass]="{'side-hidden': !showSide}">
+  <button type="button" class="btn"
+          [(ngModel)]="showSide"
+          (click)="toggleSide()"
+          ngDefaultControl>
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+  </button>
 </header>
-<header id="side" role="banner">
-<ek-menu>
-
-</ek-menu>
+<header id="side"
+        role="banner"
+        [ngClass]="{'side-hidden': !showSide}">
+  <ek-menu></ek-menu>
 </header>

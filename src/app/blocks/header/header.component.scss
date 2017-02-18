@@ -1,17 +1,37 @@
-header#top {
-  height: 60px;
-  width: 100%;
+header {
   position: absolute;
   top: 0;
-  z-index: 500;
   background: #333;
-}
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 
-header#side {
-  height: 100%;
-  width: 120px;
-  position: absolute;
-  top: 0;
-  z-index: 300;
-  background: #333;
+  &#top {
+    height: 60px;
+    width: 100%;
+    left: 120px;
+    z-index: 500;
+    .btn {
+      background: none;
+      .glyphicon {
+        color: #fff;
+        font-size: 30px;
+        line-height:1.5;
+      }
+    }
+
+    &.side-hidden {
+      left: 0;
+    }
+  }
+
+  &#side {
+    height: 100%;
+    width: 120px;
+    z-index: 300;
+    left: 0;
+
+    &.side-hidden {
+      left: -120px;
+    }
+  }
 }
