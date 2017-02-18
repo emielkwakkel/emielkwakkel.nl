@@ -16,11 +16,12 @@ export class HomeComponent implements OnInit {
       'Maureen',
       'Angular 2',
       'Amazon Echo',
-      'HTML(5) & (S)CSS',
+      'HTML & (S)CSS',
       'working international',
       'JavaScript',
       'working agile',
       'Arduino',
+      'Joomla',
       'Raspberry Pi']);
   }
 
