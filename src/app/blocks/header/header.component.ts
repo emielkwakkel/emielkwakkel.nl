@@ -6,7 +6,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public showSide : boolean = true;
+  public showSide : boolean;
   @HostListener('window:resize', ['$event'])
   onResize(event) : void {
     const innerWidth: number = event.target.innerWidth;
@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // Show sidebar if width of window if over or equal to 768 pixels.
+    this.showSide = (window.innerWidth >= 768);
   }
 
   toggleSide() : void {
