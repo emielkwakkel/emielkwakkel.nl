@@ -8,8 +8,8 @@ header {
   &#top {
     height: 60px;
     width: 100%;
-    left: 120px;
-    z-index: 500;
+    z-index: 200;
+    padding-left: 120px;
     .btn {
       background: none;
       .glyphicon {
@@ -20,7 +20,7 @@ header {
     }
 
     &.side-hidden {
-      left: 0;
+      padding-left: 0;
     }
   }
 
