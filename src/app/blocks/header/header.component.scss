@@ -35,3 +35,8 @@ header {
     }
   }
 }
+@media(min-width:768px){
+  #top {
+    top: -60px;
+  }
+}
