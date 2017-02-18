@@ -1,4 +1,13 @@
-header {
+header#top {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 500;
+  background: #333;
+}
+
+header#side {
   height: 100%;
   width: 120px;
   position: absolute;
