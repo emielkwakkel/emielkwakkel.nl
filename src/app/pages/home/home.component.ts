@@ -13,9 +13,13 @@ export class HomeComponent implements OnInit {
   constructor(private _typewriterService: TypewriterService) {
     this.contents = this._typewriterService.format([
       'TypeScript',
+      'Maureen',
       'Angular 2',
       'Amazon Echo',
+      'HTML(5) & (S)CSS',
+      'working international',
       'JavaScript',
+      'working agile',
       'Arduino',
       'Raspberry Pi']);
   }

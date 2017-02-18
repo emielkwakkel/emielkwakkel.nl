@@ -24,12 +24,16 @@ article {
       resize: vertical;
       overflow: auto;
       position: absolute;
-      h4 {
-        font-size: 25px;
-      }
       h2 {
         font-size: 50px;
         margin: 0;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight:200;
+      }
+      h4 {
+        font-size: 25px;
       }
     }
     .me {
@@ -44,4 +48,8 @@ article {
 typewriter {
   display: inline-block;
   color: #00ac84;
+}
+
+.glyphicon-heart-empty {
+  color: #fa0000;
 }
