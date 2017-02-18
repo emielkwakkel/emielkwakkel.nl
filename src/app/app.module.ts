@@ -9,7 +9,7 @@ import { PagesModule } from "./pages/pages.module";
 
 // Import components
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './blocks/menu/menu.component';
 import { MainComponent } from './blocks/main/main.component';
 import { HeaderComponent } from './blocks/header/header.component';
 

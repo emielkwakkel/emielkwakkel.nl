@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ek-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  templateUrl: 'menu.component.html',
+  styleUrls: ['menu.component.scss']
 })
 export class MenuComponent implements OnInit {
 
