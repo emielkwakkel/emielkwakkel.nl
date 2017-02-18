@@ -2,18 +2,32 @@ article {
   width: 100%;
   height: 100%;
 
-  .heading {
-    padding: 300px 0 0 0;
-    h4 {
-      font-size: 25px;
-    }
-    h2 {
-      font-size: 30px;
+  div {
+    height: 100%;
+    .table {
+      height: 100%;
+      display: table;
+      .heading {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 100px 0 0 0;
+        h4 {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 50px;
+          margin: 0;
+        }
+      }
+      .me {
+        vertical-align: middle;
+        width: 100%;
+      }
     }
   }
+}
 
-  .me {
-    width: 100%;
-    margin: 100px 0 0 0;
-  }
+typewriter {
+  display: inline-block;
+  color: #00ac84;
 }

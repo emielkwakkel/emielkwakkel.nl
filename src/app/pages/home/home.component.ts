@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { TypewriterService, TypewriterContent } from "ng2-typewriter";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [TypewriterService]
 })
 export class HomeComponent implements OnInit {
+  public contents: TypewriterContent[];
 
-  constructor() { }
+  constructor(private _typewriterService: TypewriterService) {
+    this.contents = this._typewriterService.format([
+      'TypeScript',
+      'Angular 2',
+      'Amazon Echo',
+      'JavaScript',
+      'Arduino',
+      'Raspberry Pi']);
+  }
 
   ngOnInit() {
   }
-
 }
