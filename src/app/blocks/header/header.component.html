@@ -9,6 +9,7 @@
 </header>
 <header id="side"
         role="banner"
-        [ngClass]="{'side-hidden': !showSide}">
+        [ngClass]="{'side-hidden': !showSide}"
+        (swipeleft)="toggleSideFalse()">
   <ek-menu></ek-menu>
 </header>

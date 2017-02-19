@@ -23,6 +23,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  toggleSideFalse() {
+    this.showSide = false;
+  }
+
   ngOnInit() {
     // Show sidebar if width of window if over or equal to 768 pixels.
     this.showSide = (window.innerWidth >= 768);
