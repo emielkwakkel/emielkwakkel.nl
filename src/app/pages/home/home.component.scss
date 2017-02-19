@@ -45,19 +45,18 @@ typewriter {
 
 @media(max-width:767px){
   article {
-    background: url('/assets/images/emielkwakkel.png') no-repeat right bottom;
+    background: url('/assets/images/emielkwakkel.png') no-repeat right bottom fixed;
     -webkit-background-size:auto 100%;
     background-size: auto 100%;
 
     div {
       .heading {
         display: block;
-        margin-top: 80px;
+        padding-top: 80px;
       }
     }
   }
 }
-
 @media(max-width:500px){
   article {
     -webkit-background-size:auto 60%;
