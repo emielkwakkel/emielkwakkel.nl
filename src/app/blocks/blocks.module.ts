@@ -8,6 +8,8 @@ import { HeaderComponent } from "./header/header.component";
 import { MainComponent } from "./main/main.component";
 import { MenuComponent } from "./menu/menu.component";
 import { FormsModule } from "@angular/forms";
+import { BlocksService } from "./blocks.service";
+import { Blocks } from "./blocks";
 
 @NgModule({
   imports: [
@@ -23,6 +25,10 @@ import { FormsModule } from "@angular/forms";
   exports: [
     HeaderComponent,
     MainComponent
+  ],
+  providers: [
+    BlocksService,
+    Blocks
   ]
 })
 export class BlocksModule {

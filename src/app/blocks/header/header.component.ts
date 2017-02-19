@@ -1,27 +1,24 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import { BlocksService } from "../blocks.service";
+import { Blocks } from "../blocks";
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'ek-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  public showSide : boolean;
+export class HeaderComponent implements OnInit, OnDestroy {
+  private subscription : Subscription;
+  public showSide: boolean;
+
   @HostListener('window:resize', ['$event'])
-  onResize(event) : void {
-    const innerWidth: number = event.target.innerWidth;
-
-    // Hide side if screen width gets belows
-    if(innerWidth < 768 && this.showSide) {
-      this.showSide = false;
-    }
-
-    if (innerWidth >= 768 && !this.showSide) {
-      this.showSide = true;
-    }
+  onResize(event): void {
+    this._blocksService.onResizeShowSide(event);
   }
 
-  constructor() { }
+  constructor(private _blocksService: BlocksService, private _blocks: Blocks) {
+  }
 
   toggleSideFalse() {
     this.showSide = false;
@@ -29,10 +26,18 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     // Show sidebar if width of window if over or equal to 768 pixels.
-    this.showSide = (window.innerWidth >= 768);
+    this._blocksService.onInitShowSide(window.innerWidth);
+
+    this.subscription = this._blocks.showSide
+      .subscribe(item => this.showSide = item);
   }
 
-  toggleSide() : void {
-    this.showSide = !this.showSide;
+  ngOnDestroy() {
+    // prevent memory leak when component is destroyed
+    this.subscription.unsubscribe();
+  }
+
+  toggleSide(): void {
+    this._blocksService.toggleSide();
   }
 }
