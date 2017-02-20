@@ -1,4 +1,3 @@
-import { Injector } from "@angular/core";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { State } from "./blocks.interface";
 
@@ -8,7 +7,6 @@ const state: State = {
 
 const store = new BehaviorSubject<State>(state);
 
-@Injector()
 export class BlocksService {
   store = store;
   changes = store
@@ -33,10 +31,6 @@ export class BlocksService {
     return this.store.value.showSide;
   }
 
-  hideSideOnMobile() {
-
-  }
-
   onResizeShowSide(event): void {
     const innerWidth: number = event.target.innerWidth;
 
@@ -49,4 +43,5 @@ export class BlocksService {
       this.setShowSide(true);
     }
   }
+
 }
