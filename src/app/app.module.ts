@@ -1,7 +1,3 @@
-import "core-js/client/shim"; // or load it before other angular2 & zone.js stuff
-import "zone.js";
-import "reflect-metadata";
-
 // Core modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

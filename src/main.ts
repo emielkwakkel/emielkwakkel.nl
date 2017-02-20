@@ -1,3 +1,7 @@
+import "core-js/client/shim"; // or load it before other angular2 & zone.js stuff
+import "zone.js";
+import "reflect-metadata";
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
