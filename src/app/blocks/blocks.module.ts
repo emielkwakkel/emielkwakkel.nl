@@ -9,7 +9,6 @@ import { MainComponent } from "./main/main.component";
 import { MenuComponent } from "./menu/menu.component";
 import { FormsModule } from "@angular/forms";
 import { BlocksService } from "./blocks.service";
-import { Blocks } from "./blocks";
 
 @NgModule({
   imports: [
@@ -27,8 +26,7 @@ import { Blocks } from "./blocks";
     MainComponent
   ],
   providers: [
-    BlocksService,
-    Blocks
+    BlocksService
   ]
 })
 export class BlocksModule {

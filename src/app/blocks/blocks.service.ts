@@ -2,7 +2,7 @@ import { Injector } from "@angular/core";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { State } from "./blocks.interface";
 
-const state : State = {
+const state: State = {
   showSide: false
 };
 
@@ -26,7 +26,7 @@ export class BlocksService {
     this.store.next(state);
   }
 
-  set showSide(showSide) {
+  setShowSide(showSide) {
     console.log('_showSide in blocks', showSide);
 
     const currentState = this.getState();
@@ -40,17 +40,16 @@ export class BlocksService {
     return this.store.value.showSide;
   }
 
-  onResizeShowSide(event) : void {
+  onResizeShowSide(event): void {
     const innerWidth: number = event.target.innerWidth;
 
     // Hide side if screen width gets belows
-    if(innerWidth < 768 && this.showSide) {
-      this.showSide = false;
+    if (innerWidth < 768 && this.showSide) {
+      this.setShowSide(false);
     }
 
     if (innerWidth >= 768 && !this.showSide) {
-      this.showSide = true;
+      this.setShowSide(true);
     }
   }
-
 }
