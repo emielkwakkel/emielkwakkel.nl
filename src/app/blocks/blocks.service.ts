@@ -1,30 +1,56 @@
-import { Injectable } from '@angular/core';
-import { Blocks } from "./blocks";
-import { Observable, Subscriber } from "rxjs";
+import { Injector } from "@angular/core";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { State } from "./blocks.interface";
 
-@Injectable()
+const state : State = {
+  showSide: false
+};
+
+const store = new BehaviorSubject<State>(state);
+
+@Injector()
 export class BlocksService {
+  store = store;
+  changes = store
+    .asObservable()
+    .distinctUntilChanged()
+    .do(changes => console.log('new state', changes));
 
-  constructor(private _blocks : Blocks) { }
+  getState() {
+    console.log('getState');
+    return this.store.value;
+  }
+
+  setState(state: State) {
+    console.log('setState', state);
+    this.store.next(state);
+  }
+
+  set showSide(showSide) {
+    console.log('_showSide in blocks', showSide);
+
+    const currentState = this.getState();
+    const newState = Object.assign({}, currentState, { showSide });
+    console.log(newState);
+
+    this.setState(newState);
+  }
+
+  get showSide() {
+    return this.store.value.showSide;
+  }
 
   onResizeShowSide(event) : void {
     const innerWidth: number = event.target.innerWidth;
 
     // Hide side if screen width gets belows
-    if(innerWidth < 768 && this._blocks.showSide) {
-      this._blocks.showSide = false;
+    if(innerWidth < 768 && this.showSide) {
+      this.showSide = false;
     }
 
-    if (innerWidth >= 768 && !this._blocks.showSide) {
-      this._blocks.showSide = true;
+    if (innerWidth >= 768 && !this.showSide) {
+      this.showSide = true;
     }
   }
 
-  onInitShowSide(width) : void {
-    this._blocks.showSide = (width >= 768)
-  }
-
-  toggleSide() : void {
-    this._blocks.showSide = !this._blocks.showSide;
-  }
 }

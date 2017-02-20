@@ -1,19 +1,18 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class Blocks {
-  public _showSide = new BehaviorSubject<boolean>(false);
+  public _showSide : boolean;
 
-  set showSide(_showSide) {
+  set showSide(_showSide : boolean) {
+    console.log('setting', _showSide);
+
     this._showSide = _showSide;
-    console.log('setting', this._showSide);
   }
 
-  get showSide() : Observable<boolean> {
+  get showSide() : boolean {
     console.log('getting', this._showSide);
-
     return this._showSide;
   }
 }
