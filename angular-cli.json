@@ -24,6 +24,8 @@
         "../node_modules/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [
+        "../node_modules/es6-shim/es6-shim.min.js",
+        "../node_modules/angular2-ie9-shims/shims_for_IE@2.1.2.js",
         "../node_modules/hammerjs/hammer.min.js"
       ],
       "environments": {
