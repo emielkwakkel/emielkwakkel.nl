@@ -24,6 +24,9 @@ h1 {
   text-align: center;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  &.active {
+    background: #303030;
+  }
   i {
     font-size: 30px;
     display: block;
