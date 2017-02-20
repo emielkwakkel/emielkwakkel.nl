@@ -33,6 +33,10 @@ export class BlocksService {
     return this.store.value.showSide;
   }
 
+  hideSideOnMobile() {
+
+  }
+
   onResizeShowSide(event): void {
     const innerWidth: number = event.target.innerWidth;
 
