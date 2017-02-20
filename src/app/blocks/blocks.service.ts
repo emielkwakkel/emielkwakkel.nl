@@ -13,26 +13,19 @@ export class BlocksService {
   store = store;
   changes = store
     .asObservable()
-    .distinctUntilChanged()
-    .do(changes => console.log('new state', changes));
+    .distinctUntilChanged();
 
   getState() {
-    console.log('getState');
     return this.store.value;
   }
 
   setState(state: State) {
-    console.log('setState', state);
     this.store.next(state);
   }
 
   setShowSide(showSide) {
-    console.log('_showSide in blocks', showSide);
-
     const currentState = this.getState();
     const newState = Object.assign({}, currentState, { showSide });
-    console.log(newState);
-
     this.setState(newState);
   }
 
