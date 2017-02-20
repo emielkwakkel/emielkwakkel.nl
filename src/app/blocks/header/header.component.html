@@ -2,7 +2,7 @@
         [ngClass]="{'side-hidden': !showSide}">
   <button type="button" class="btn"
           [(ngModel)]="showSide"
-          (click)="toggleSide()"
+          (click)="setShowSide(!showSide)"
           ngDefaultControl>
     <span class="glyphicon glyphicon-menu-hamburger"></span>
   </button>
@@ -10,6 +10,6 @@
 <header id="side"
         role="banner"
         [ngClass]="{'side-hidden': !showSide}"
-        (swipeleft)="toggleSideFalse()">
+        (swipeleft)="setShowSide(false)">
   <ek-menu></ek-menu>
 </header>
