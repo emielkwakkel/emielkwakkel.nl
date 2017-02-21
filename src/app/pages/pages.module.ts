@@ -3,6 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { TypewriterModule } from "ng2-typewriter";
+import { SharedModule } from "../shared/shared.module";
 
 // Components
 import { AboutComponent } from './about/about.component';
@@ -13,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     RouterModule.forChild([
       { path: 'home', component: HomeComponent },

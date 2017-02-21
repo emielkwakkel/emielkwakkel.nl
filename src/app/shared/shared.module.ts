@@ -6,6 +6,11 @@ import { PercentageComponent } from './chart/percentage/percentage.component';
   imports: [
     CommonModule
   ],
-  declarations: [PercentageComponent]
+  declarations: [
+    PercentageComponent
+  ],
+  exports: [
+    PercentageComponent
+  ]
 })
 export class SharedModule { }
