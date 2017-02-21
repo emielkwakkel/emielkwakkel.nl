@@ -1,5 +1,5 @@
 // Modules
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { TypewriterModule } from "ng2-typewriter";
@@ -23,6 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ]),
     TypewriterModule
   ],
-  declarations: [AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent]
+  declarations: [AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class PagesModule { }
