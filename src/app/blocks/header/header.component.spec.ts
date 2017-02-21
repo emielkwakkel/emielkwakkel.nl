@@ -1,9 +1,11 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { HeaderComponent } from './header.component';
+import { FormsModule } from "@angular/forms";
+import { BlocksService } from "../blocks.service";
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -11,7 +13,10 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent ],
+      imports: [ FormsModule ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+      providers: [ BlocksService ]
     })
     .compileComponents();
   }));
