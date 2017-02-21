@@ -1,9 +1,12 @@
-<figure class="chart animate" [ngClass]="'percentage-' + percentage">
-  <svg role="img" xmlns="http://www.w3.org/2000/svg">
-    <title>{{ title }}</title>
-    <desc>{{ description }}</desc>
-    <circle class="circle-background"/>
-    <circle class="circle-foreground"/>
-  </svg>
-  <figcaption>{{ title }}</figcaption>
-</figure>
+<div class="chart-container">
+  <figure class="chart animate" [ngClass]="'percentage-' + percentage">
+    <svg role="img" xmlns="http://www.w3.org/2000/svg">
+      <title>{{ title }}</title>
+      <desc>{{ description }}</desc>
+      <circle class="circle-background"/>
+      <circle class="circle-foreground"/>
+    </svg>
+    <figcaption>{{ title }}</figcaption>
+  </figure>
+  <h4>{{ title }}</h4>
+</div>

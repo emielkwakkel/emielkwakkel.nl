@@ -116,6 +116,16 @@ $configs: (
   percentage-100: (percentage: 100),
 );
 
+.chart-container {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: map-get($default, svgSize);
+  h4 {
+    text-align: center;
+  }
+
+}
+
 /* ------- DO NOT EDIT BELOW --------- */
 $pi: 3.14;
 $labelData: '';
