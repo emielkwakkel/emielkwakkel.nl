@@ -1,5 +1,7 @@
 <header id="top"
-        [ngClass]="{'side-hidden': !showSide}">
+        [ngClass]="{'side-hidden': !showSide}"
+        (swipeleft)="setShowSide(false)"
+        (swiperight)="setShowSide(true)">
   <button type="button" class="btn"
           [(ngModel)]="showSide"
           (click)="setShowSide(!showSide)"
