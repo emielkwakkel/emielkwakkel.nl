@@ -12,6 +12,8 @@ import { BlocksModule } from "./blocks/blocks.module";
 
 // Components
 import { AppComponent } from './app.component';
+import { AngularFireModule } from "angularfire2";
+import { firebaseConfig } from "./firebase.config";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { AppComponent } from './app.component';
     HttpModule,
     PagesModule,
     BlocksModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent],
