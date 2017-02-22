@@ -10,8 +10,9 @@ section {
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   // hammerjs uses x-axis scrolling for swiping left / right.
-  // It sets touch-action to none, thus also preventing vertical scrolling on mobile devices.
+  // It sets touch-action to none, preventing vertical scrolling on mobile devices.
   touch-action: pan-y !important;
+  -webkit-user-drag: auto !important;
 }
 
 @media(max-width:767px){
