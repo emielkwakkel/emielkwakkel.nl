@@ -11,7 +11,8 @@ import { Subscription } from "rxjs";
   styleUrls: ['menu.component.scss']
 })
 export class MenuComponent implements OnDestroy {
-  menuItems: FirebaseListObservable<MenuItem[]>;
+  // menuItems: FirebaseListObservable<MenuItem[]>;
+  menuItems: any;
   subscribe: Subscription;
 
   constructor(

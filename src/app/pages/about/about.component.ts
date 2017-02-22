@@ -9,7 +9,8 @@ import { Skill } from "./skill.interface";
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnDestroy {
-  skills: FirebaseListObservable<Skill[]>;
+  // skills: FirebaseListObservable<Skill[]>;
+  skills: any;
   subscribe: Subscription;
   constructor(private _firebase : AngularFire) {
     this.subscribe = _firebase.database
