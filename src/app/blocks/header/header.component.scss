@@ -19,8 +19,33 @@ header {
       }
     }
 
+    .logo {
+      width: 120px;
+      position:absolute;
+      right: -120px; // Hidden if side is shown.
+      top: 0;
+      margin: 0;
+      padding: 15px 0 14px 0;
+      font-weight: 500;
+      line-height: 1.1em;
+      text-align: center;
+      background: #00ac84;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #eee;
+      cursor: default;
+      span {
+        font-size: 20px;
+      }
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+    }
+
     &.side-hidden {
       padding-left: 0;
+      .logo {
+        right: 0px;
+      }
     }
   }
 
