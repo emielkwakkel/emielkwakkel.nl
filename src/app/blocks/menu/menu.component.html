@@ -1,28 +1,10 @@
 <h1><span>Emiel</span> <br>Kwakkel</h1>
 <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
   <ul class="nav">
-    <li>
-      <a [routerLink]="['/home']" routerLinkActive="active">
-        <i class="fa fa-home fa-fw" aria-hidden="true"></i>
-        Home
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="['/about']" routerLinkActive="active">
-        <i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>
-        About
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="['/mission']" routerLinkActive="active">
-        <i class="fa fa-heart-o fa-fw" aria-hidden="true"></i>
-        Mission
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="['/contact']" routerLinkActive="active">
-        <i class="fa fa-comment-o fa-fw" aria-hidden="true"></i>
-        Contact
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.routerLink" routerLinkActive="active">
+        <i class="fa fa-fw" [ngClass]="item.iconClass" aria-hidden="true"></i>
+        {{ item.text }}
       </a>
     </li>
   </ul>
