@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BlocksService } from "../blocks.service";
 
 @Component({
   selector: 'ek-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
 
-  constructor() { }
+  constructor(private _blocksService: BlocksService) {}
 
-  ngOnInit() {
+  setShowSide(showSide) {
+    this._blocksService.setShowSide(showSide);
   }
 
 }
