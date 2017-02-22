@@ -1,5 +1,5 @@
 <article>
-  <div class="col-sm-offset-1 col-xs-12 col-sm-4 about">
+  <div class="col-sm-offset-1 col-xs-12 col-sm-5 about">
     <h1><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Who is that guy?</h1>
     <p><strong>
       Good question! Emiel is a Dutch guy, 28 years and currently living in Stockholm, Sweden.
@@ -15,26 +15,11 @@
     <h2>I'm a recruiter and... </h2>
     <p>I'm sorry, I'm currently not in the market for switching carriers.</p>
   </div>
-  <div class="col-sm-offset-1 col-xs-12 col-sm-6 col-md-6 col-lg-4 knowledge">
-    <ek-percentage
-      percentage="90"
-      title="AngularJS"
-      description="My knowledge on AngularJS">
-    </ek-percentage>
-    <ek-percentage
-      percentage="45"
-      title="Angular 2"
-      description="My knowledge on Angular 2">
-    </ek-percentage>
-    <ek-percentage
-      percentage="75"
-      title="TypeScript"
-      description="My knowledge on TypeScript">
-    </ek-percentage>
-    <ek-percentage
-      percentage="90"
-      title="HTML &amp; CSS"
-      description="My knowledge on HTML & CSS">
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 knowledge">
+    <ek-percentage *ngFor="let skill of skills"
+      [percentage]="skill.percentage"
+      [title]="skill.title"
+      [description]="skill.description">
     </ek-percentage>
   </div>
 </article>
