@@ -13,6 +13,8 @@ import { BlocksModule } from "./blocks/blocks.module";
 // Components
 import { AppComponent } from './app.component';
 import { AngularFireModule } from "angularfire2";
+
+// Firebase config not committed to not expose keys, add manually.
 import { firebaseConfig } from "./firebase.config";
 
 @NgModule({
