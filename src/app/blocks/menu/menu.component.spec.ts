@@ -7,8 +7,9 @@ import { MenuComponent } from './menu.component';
 import { FormsModule } from "@angular/forms";
 import { BlocksService } from "../blocks.service";
 import { RouterModule, Router } from "@angular/router";
+import { AngularFire, AngularFireModule } from "angularfire2";
 
-fdescribe('MenuComponent', () => {
+describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
   let mockRouter: any;
@@ -16,12 +17,24 @@ fdescribe('MenuComponent', () => {
     navigate = jasmine.createSpy('navigate');
   }
 
+  const mockFirebaseConfig = {
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    storageBucket: '',
+    messagingSenderId: ''
+  };
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MenuComponent ],
-      imports: [ FormsModule, RouterModule.forChild([]) ],
+      imports: [
+        FormsModule,
+        RouterModule.forChild([]),
+        AngularFireModule.initializeApp(mockFirebaseConfig)
+      ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-      providers: [ BlocksService, { provide: Router, useValue: MockRouter } ]
+      providers: [ BlocksService, { provide: Router, useValue: MockRouter }, AngularFire ]
     })
     .compileComponents();
   }));
