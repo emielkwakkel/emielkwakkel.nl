@@ -21,11 +21,12 @@ header {
 
     .logo {
       width: 120px;
+      height: 60px;
       position:absolute;
       right: -120px; // Hidden if side is shown.
       top: 0;
       margin: 0;
-      padding: 15px 0 14px 0;
+      padding: 15px 0 0 0;
       font-weight: 500;
       line-height: 1.1em;
       text-align: center;
