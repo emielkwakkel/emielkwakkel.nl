@@ -40,5 +40,4 @@ export class HeaderComponent implements OnInit, OnDestroy {
     // prevent memory leak when component is destroyed
     this._subscription.unsubscribe();
   }
-
 }

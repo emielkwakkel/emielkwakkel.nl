@@ -10,7 +10,7 @@ describe('BlocksService', () => {
     });
   });
 
-  it('should ...', inject([BlocksService], (service: BlocksService) => {
-    expect(service).toBeTruthy();
+  it('should ...', inject([BlocksService], (_service: BlocksService) => {
+    expect(_service).toBeTruthy();
   }));
 });

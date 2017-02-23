@@ -28,7 +28,9 @@ import { BlocksService } from "./blocks.service";
   providers: [
     BlocksService
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class BlocksModule {
 }
