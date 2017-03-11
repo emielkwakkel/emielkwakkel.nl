@@ -14,6 +14,7 @@ export class MenuComponent implements OnDestroy {
   // menuItems: FirebaseListObservable<MenuItem[]>;
   menuItems: any;
   subscribe: Subscription;
+  loading: boolean = true;
 
   constructor(
     private _router: Router,
@@ -29,7 +30,10 @@ export class MenuComponent implements OnDestroy {
 
     this.subscribe = _firebase.database
       .list('/menu-items')
-      .subscribe(items => this.menuItems = items);
+      .subscribe(items => {
+        this.loading = false;
+        this.menuItems = items;
+      });
   }
 
   ngOnDestroy() {
