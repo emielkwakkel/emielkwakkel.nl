@@ -4,7 +4,8 @@
   aria-hidden="true"
   *ngIf="loading">
 </i>
-<span class="sr-only lo">Loading...</span>
+<span class="sr-only lo"
+      *ngIf="loading">Loading...</span>
 <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
   <ul class="nav">
     <li *ngFor="let item of menuItems">
