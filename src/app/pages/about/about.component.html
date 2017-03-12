@@ -1,25 +1,46 @@
 <article>
-  <div class="col-sm-offset-1 col-xs-12 col-sm-5 about">
-    <h1><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Who is that guy?</h1>
-    <p><strong>
-      Good question! Emiel is a Dutch guy, 28 years and currently living in Stockholm, Sweden.
-      Emiel works for Sogeti as a Front-End Engineer, and teaches a three day AngularJS course.
-      Besides that he is active member of the Sogeti Front-End Core Team and Innovation & Technology Center.
-    </strong></p>
-    <h2>Bio?</h2>
-    <p>
-      From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
-      he studied at the University of Applied Science of Arnhem and Nijmegen <a href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia Design</a>, focussing on front-end, usability and interaction design.
-      After his study Emiel worked as a front-end developer four years for <a href="http://tradepoint.nl">TradePoint</a>, working on brands like <a href="http://curves.nl">Curves Holland</a>.
-    </p>
-    <h2>I'm a recruiter and... </h2>
-    <p>I'm sorry, I'm currently not in the market for switching carriers.</p>
+  <div class="row about">
+    <div class="col-sm-offset-1 col-xs-12 col-sm-5">
+      <h1><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i> Who is that guy?</h1>
+      <p><strong>
+        Good question! Emiel is a Dutch guy, 28 years and currently living in Arnhem, Netherlands.
+        Emiel works for Sogeti as a Front-End Engineer, and teaches a three day AngularJS course.
+        Besides that he is active member of the Sogeti Front-End Core Team and Innovation & Technology Center.
+      </strong></p>
+    </div>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 knowledge">
-    <ek-percentage *ngFor="let skill of skills"
-      [percentage]="skill.percentage"
-      [title]="skill.title"
-      [description]="skill.description">
-    </ek-percentage>
+  <div class="container-fluid knowledge">
+    <div class="row">
+      <div class="col-sm-offset-1 col-xs-12 col-sm-10">
+        <h2>Knowledge</h2>
+        <i
+          class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
+          aria-hidden="true"
+          *ngIf="loading">
+        </i>
+        <span class="sr-only lo"
+              *ngIf="loading">Loading...</span>
+        <ek-percentage *ngFor="let skill of skills"
+                       [percentage]="skill.percentage"
+                       [title]="skill.title"
+                       [description]="skill.description">
+        </ek-percentage>
+      </div>
+
+    </div>
+  </div>
+  <div class="row details">
+    <div class="col-sm-offset-1 col-xs-12 col-sm-5 bio">
+      <h2>Bio</h2>
+      <p>
+        From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
+        he studied at the University of Applied Science of Arnhem and Nijmegen <a href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia Design</a>, focussing on front-end, usability and interaction design.
+        After his study Emiel worked as a front-end developer four years for <a href="http://tradepoint.nl">TradePoint</a>, working on brands like <a href="http://curves.nl">Curves Holland</a>.
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-5 recruiter">
+      <h2>I'm a recruiter and... </h2>
+      <p>I'm sorry, I'm not in the market for switching carriers.</p>
+    </div>
   </div>
 </article>

@@ -1,5 +1,23 @@
-article {
-  .knowledge {
-    margin-top: 60px;
+.knowledge {
+  h2 {
+    display: none;
   }
+  padding: 75px 0;
+  margin: 75px 0;
+  background: #fafafa;
+  left: 0;
+}
+
+ek-percentage {
+  padding-right: 30px;
+  float: left;
+}
+
+.details {
+  margin-bottom: 75px;
+}
+
+.loading {
+  color: #bbb;
+  margin-top: -25px;
 }

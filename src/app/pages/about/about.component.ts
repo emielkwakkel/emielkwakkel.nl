@@ -12,10 +12,15 @@ export class AboutComponent implements OnDestroy {
   // skills: FirebaseListObservable<Skill[]>;
   skills: any;
   subscribe: Subscription;
+  loading: boolean = true;
+
   constructor(private _firebase : AngularFire) {
     this.subscribe = _firebase.database
       .list('/skills')
-      .subscribe(skills => this.skills = skills);
+      .subscribe(skills => {
+        this.loading = false;
+        this.skills = skills;
+      });
   }
 
   ngOnDestroy() {
