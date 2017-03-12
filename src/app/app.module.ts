@@ -4,18 +4,18 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap';
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
 
 // App modules
-import { PagesModule } from "./pages/pages.module";
-import { BlocksModule } from "./blocks/blocks.module";
+import { PagesModule } from './pages/pages.module';
+import { BlocksModule } from './blocks/blocks.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { AngularFireModule } from "angularfire2";
 
 // Firebase config not committed to not expose keys, add manually.
-import { firebaseConfig } from "./firebase.config";
+import { firebaseConfig } from './firebase.config';
 
 @NgModule({
   declarations: [
