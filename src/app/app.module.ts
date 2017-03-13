@@ -22,7 +22,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
     'pinch': { enable: false },
     'rotate': { enable: false },
-    'swipe': { directions: 'DIRECTION_HORIZONTAL'}
+    'swipe': { enable: true, direction: 6 }
   }
 }
 
