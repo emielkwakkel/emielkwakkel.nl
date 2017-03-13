@@ -16,6 +16,15 @@ import { AppComponent } from './app.component';
 
 // Firebase config not committed to not expose keys, add manually.
 import { firebaseConfig } from './firebase.config';
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    'pinch': { enable: false },
+    'rotate': { enable: false },
+    'swipe': { directions: 'DIRECTION_HORIZONTAL'}
+  }
+}
 
 @NgModule({
   declarations: [
@@ -32,9 +41,14 @@ import { firebaseConfig } from './firebase.config';
     PagesModule,
     BlocksModule,
     AlertModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
