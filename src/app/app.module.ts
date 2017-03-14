@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap';
 import { RouterModule } from '@angular/router';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { AngularFireModule } from 'angularfire2';
 
 // App modules
@@ -14,17 +15,11 @@ import { BlocksModule } from './blocks/blocks.module';
 // Components
 import { AppComponent } from './app.component';
 
-// Firebase config not committed to not expose keys, add manually.
+// Configs
 import { firebaseConfig } from './firebase.config';
-import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
+import { HammerConfig } from './hammer.config'
 
-export class MyHammerConfig extends HammerGestureConfig {
-  overrides = <any> {
-    'pinch': { enable: false },
-    'rotate': { enable: false },
-    'swipe': { enable: true, direction: 6 }
-  }
-}
+
 
 @NgModule({
   declarations: [
@@ -46,7 +41,7 @@ export class MyHammerConfig extends HammerGestureConfig {
   providers: [
     {
       provide: HAMMER_GESTURE_CONFIG,
-      useClass: MyHammerConfig
+      useClass: HammerConfig
     }
   ],
   bootstrap: [AppComponent],

@@ -4,6 +4,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  -webkit-overflow-scrolling: touch; // Make scrolling smooth again! On iOS.
+}
+
 p {
   font-size: 17px;
   line-height: 1.8em;
