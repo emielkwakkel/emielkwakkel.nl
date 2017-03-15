@@ -3,10 +3,10 @@
 
 $default: (
   svgSize: 150px,
-  strokeWidth: 10px,
-  backgroundColor: #ddd,
-  foregroundColor: #00ac84,
-  labelColor: #000,
+  strokeWidth: 6px,
+  backgroundColor: darken(#00ac84, 2),
+  foregroundColor: #f1f1f1, //#00ac84
+  labelColor: #f1f1f1,
   labelFontSize: 2.5rem,
   duration: 3s,
   animationDelay: .5s
@@ -122,6 +122,9 @@ $configs: (
   width: map-get($default, svgSize);
   h4 {
     text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 15px 0 0 0;
   }
 
 }
@@ -194,6 +197,7 @@ $labelData: '';
         content: $labelData;
         white-space: pre;
         font-size: map-get($merged, labelFontSize);
+        font-weight: 300;
         line-height: map-get($merged, labelFontSize);
       }
     }

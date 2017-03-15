@@ -10,23 +10,26 @@
     </div>
   </div>
   <div class="container-fluid knowledge">
-    <div class="row">
-      <div class="col-sm-offset-1 col-xs-12 col-sm-10">
-        <h2>Knowledge</h2>
-        <i
-          class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
-          aria-hidden="true"
-          *ngIf="loading">
-        </i>
-        <span class="sr-only lo"
-              *ngIf="loading">Loading...</span>
-        <ek-percentage *ngFor="let skill of skills"
-                       [percentage]="skill.percentage"
-                       [title]="skill.title"
-                       [description]="skill.description">
-        </ek-percentage>
+    <div class="row future">
+      <div class="clip"><span class="fa fa-code" aria-hidden="true"></span></div>
+      <span class="fa fa-code" aria-hidden="true"></span>
+      <div class="row">
+        <div class="col-sm-offset-1 col-xs-12 col-sm-10">
+          <h2>Knowledge</h2>
+          <i
+            class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
+            aria-hidden="true"
+            *ngIf="loading">
+          </i>
+          <span class="sr-only lo"
+                *ngIf="loading">Loading...</span>
+          <ek-percentage *ngFor="let skill of skills"
+                         [percentage]="skill.percentage"
+                         [title]="skill.title"
+                         [description]="skill.description">
+          </ek-percentage>
+        </div>
       </div>
-
     </div>
   </div>
   <div class="row details">
