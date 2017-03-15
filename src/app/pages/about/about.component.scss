@@ -10,7 +10,9 @@
   width: 100%;
   position: relative;
 
-
+  .charts {
+    text-align: center;
+  }
   span.fa {
     position: relative;
     width: 100px;
@@ -54,7 +56,7 @@
 
 ek-percentage {
   padding-right: 30px;
-  float: left;
+  display: inline-block;
 }
 
 .details {
