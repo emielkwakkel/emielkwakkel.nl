@@ -13,7 +13,7 @@ p {
   line-height: 1.8em;
 }
 
-h1 i {
+h1 span {
   margin-left: -60px;
   color: #00ac84;
   -webkit-transition: all .3s ease-out;
@@ -21,7 +21,7 @@ h1 i {
 }
 
 @media(max-width:767px) {
-  h1 i {
+  h1 span {
     margin-left: 0;
   }
 }
