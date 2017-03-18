@@ -6,6 +6,9 @@ ek-highlight {
   }
   .charts {
     text-align: center;
+    > div {
+      min-height: 227px; // While loading data height was 0.
+    }
   }
 }
 
