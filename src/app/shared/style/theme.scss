@@ -2,16 +2,34 @@
 
 $theme-colors: (
   // Main
-  'mainBackground': getColor('background'),
+  'mainBackground':       getColor('background'),
+
+  // Header
+  'headerBackground':     getColor('foreground'),
+  'headerButtonText':     getColor('text-light'),
+  'headerLogoText':       getColor('text-light'),
+  'headerLogoBackground': getColor('primary'),
 
   // Menu
-  'menuTitleBackground': getColor('primary'),
-  'menuTitleText': getColor('white'),
-  'menuText': getColor('text-light'),
-  'menuLoading': getColor('background'),
+  'menuTitleBackground':  getColor('primary'),
+  'menuTitleText':        getColor('white'),
+  'menuText':             getColor('text-light'),
+  'menuLoading':          getColor('background'),
   'menuActiveBackground': getColor('foreground-darker'),
-  'menuHoverBackground': getColor('foreground-darker'),
-  'menuHoverText': getColor('white')
+  'menuHoverBackground':  getColor('foreground-darker'),
+  'menuHoverText':        getColor('white'),
+
+  // Home
+  'homeHeartText':        getColor('red'),
+  'homeTypewriterText':   getColor('primary'),
+
+  // About
+  'aboutIconWarning':     getColor('red'),
+
+  // Percentage
+  'percentageBackground': getColor('primary-darker'),
+  'percentageForeground': getColor('text-light'),
+  'percentageText':       getColor('text-light')
 );
 
 @function getThemeColor($key: 'primary') {

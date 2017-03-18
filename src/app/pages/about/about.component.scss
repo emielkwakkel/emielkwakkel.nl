@@ -1,3 +1,5 @@
+@import '../../shared/style/theme';
+
 ek-highlight {
   h2 {
     display: none;
@@ -8,7 +10,7 @@ ek-highlight {
 }
 
 .fa-warning {
-  color: #f44242;
+  color: getThemeColor('aboutIconWarning');
 }
 
 .details {

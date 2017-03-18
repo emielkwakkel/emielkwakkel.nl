@@ -1,12 +1,14 @@
+@import '../../../shared/style/theme';
+
 // Credits here to Jim Savage (http://codepen.io/madebyjam/pen/JYVGer)
 // Work modified to work as a dynamic component.
 
 $default: (
   svgSize: 150px,
   strokeWidth: 6px,
-  backgroundColor: darken(#00ac84, 2),
-  foregroundColor: #f1f1f1, //#00ac84
-  labelColor: #f1f1f1,
+  backgroundColor: getThemeColor('percentageBackground'),
+  foregroundColor: getThemeColor('percentageForeground'),
+  labelColor: getThemeColor('percentageText'),
   labelFontSize: 2.5rem,
   duration: 3s,
   animationDelay: .5s

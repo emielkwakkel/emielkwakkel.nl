@@ -19,7 +19,8 @@ $colors: (
   'sogeti': #f15029,
 
   // Colors
-  'white': #fff
+  'white': #fff,
+  'red': #fa0000
 );
 
 @function getColor($key: 'primary') {
