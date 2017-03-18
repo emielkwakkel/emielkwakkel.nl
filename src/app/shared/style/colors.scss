@@ -1,0 +1,27 @@
+$colors: (
+  'primary': #00ac84,
+  'primary-darker': mix(black, #00ac84, 20%),
+  'primary-lighter': mix(white, #00ac84, 20%),
+  'accent': #d98328,
+  'foreground': #333,
+  'foreground-darker': mix(black, #333, 20%),
+  'foreground-lighter': mix(white, #333, 5%),
+  'background': #f1f1f1,
+  'text-dark': #333,
+  'text-light': #f1f1f1,
+
+  // Media
+  'twitter': #1da1f3,
+  'github': #333,
+  'linkedin': #0077b5,
+  'facebook': #3b5998,
+  'mail': #333,
+  'sogeti': #f15029,
+
+  // Colors
+  'white': #fff
+);
+
+@function getColor($key: 'primary') {
+  @return map-get($colors, $key);
+}

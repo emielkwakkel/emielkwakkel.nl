@@ -17,8 +17,9 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
+      "serviceWorker": true,
       "styles": [
-        "styles.scss",
+        "./app/shared/style/styles.scss",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/font-awesome/css/font-awesome.min.css"
       ],

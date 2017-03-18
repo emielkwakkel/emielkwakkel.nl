@@ -1,5 +1,7 @@
+@import '../../shared/style/theme';
+
 .loading {
-  color: #fafafa;
+  color: getThemeColor('menuLoading');
   top: 30%;
   margin-left: -27px;
   margin-top: 120px;
@@ -10,10 +12,10 @@ h2 {
   margin: 0;
   padding: 40px 0;
   text-align: center;
-  background: #00ac84;
+  background: getThemeColor('menuTitleBackground');
   font-size: 13px;
   text-transform: uppercase;
-  color: #eee;
+  color: getThemeColor('menuTitleText');
   cursor: default;
   span {
     font-size: 20px;
@@ -22,17 +24,16 @@ h2 {
   transition: all .3s ease-out;
 }
 
-.nav>li>a {
+.nav > li > a {
   padding: 30px 15px;
-  border-bottom: 3px solid #303030;
-  color: #eee;
+  color: getThemeColor('menuText');
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   &.active {
-    background: #303030;
+    background: getThemeColor('menuActiveBackground');
   }
   i {
     font-size: 30px;
@@ -41,31 +42,31 @@ h2 {
     padding: 0 0 10px 0
   }
   &:hover {
-    background: #303030;
-    color: #fff;
+    background: getThemeColor('menuHoverBackground');
+    color: getThemeColor('menuHoverColor');
   }
 }
 
-@media(max-width:767px){
+@media(max-width:767px) {
   h2 {
     padding: 12px 0;
   }
 }
 
-@media(max-height:600px){
-  .nav>li>a {
+@media(max-height:600px) {
+  .nav > li > a {
     padding: 25px 15px;
   }
 }
 
-@media(max-height:534px){
-  .nav>li>a {
+@media(max-height:534px) {
+  .nav > li > a {
     padding: 15px;
   }
 }
 
-@media(max-height:440px){
-  .nav>li>a {
+@media(max-height:440px) {
+  .nav > li > a {
     padding: 30px 15px;
     i {
       display: inline;
@@ -74,9 +75,8 @@ h2 {
   }
 }
 
-
-@media(max-height:400px){
-  .nav>li>a {
+@media(max-height:400px) {
+  .nav > li > a {
     padding: 15px;
     i {
       display: inline;

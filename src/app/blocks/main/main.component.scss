@@ -1,3 +1,5 @@
+@import '../../shared/style/theme';
+
 section {
   position: absolute;
   top: 0;
@@ -6,7 +8,7 @@ section {
   left: 120px;
   padding-top: 100px;
   width: auto;
-  background: #f1f1f1;
+  background: getThemeColor('mainBackground');
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   // hammerjs uses x-axis scrolling for swiping left / right.
@@ -15,14 +17,19 @@ section {
   overflow: scroll;
 }
 
-@media(max-width:767px){
+@media(max-width: 767px) {
   section {
     top: 60px;
     left: 0;
     padding-top: 30px;
   }
 }
-@media(min-width:768px){
+
+@media(min-width: 768px) {
 }
-@media(min-width:992px){}
-@media(min-width:1200px){}
+
+@media(min-width: 992px) {
+}
+
+@media(min-width: 1200px) {
+}

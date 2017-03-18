@@ -1,7 +1,9 @@
+@import '../../shared/style/colors';
+
 header {
   position: absolute;
   top: 0;
-  background: #333;
+  background: getColor('foreground');
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
 
@@ -13,7 +15,7 @@ header {
     .btn {
       background: none;
       .glyphicon {
-        color: #fff;
+        color: getColor('text-light');
         font-size: 30px;
         line-height:1.5;
       }
@@ -30,10 +32,10 @@ header {
       font-weight: 500;
       line-height: 1.1em;
       text-align: center;
-      background: #00ac84;
+      background: getColor('primary');
       font-size: 13px;
       text-transform: uppercase;
-      color: #eee;
+      color: getColor('text-light');
       cursor: default;
       span {
         font-size: 20px;

@@ -1,0 +1,19 @@
+@import 'colors.scss';
+
+$theme-colors: (
+  // Main
+  'mainBackground': getColor('background'),
+
+  // Menu
+  'menuTitleBackground': getColor('primary'),
+  'menuTitleText': getColor('white'),
+  'menuText': getColor('text-light'),
+  'menuLoading': getColor('background'),
+  'menuActiveBackground': getColor('foreground-darker'),
+  'menuHoverBackground': getColor('foreground-darker'),
+  'menuHoverText': getColor('white')
+);
+
+@function getThemeColor($key: 'primary') {
+  @return map-get($theme-colors, $key);
+}
