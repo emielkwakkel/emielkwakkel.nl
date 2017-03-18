@@ -13,6 +13,7 @@ article {
       resize: vertical;
       overflow: auto;
       position: absolute;
+      margin-top: -130px;
       h2 {
         font-size: 50px;
         margin: 0;
@@ -53,7 +54,7 @@ typewriter {
     div {
       .heading {
         display: block;
-        padding-top: 80px;
+        padding-top: 20px;
       }
     }
   }
