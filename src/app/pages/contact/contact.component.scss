@@ -1,50 +1,5 @@
 @import '../../shared/style/theme';
 
-.contact {
-  h2 {
-    display: none;
-  }
-  padding: 0 0 75px 0;
-  margin: 100px 0 50px 0;
-  color: getColor('background');
-  z-index: 1;
-  background: getColor('primary');
-  width: 100%;
-  position: relative;
-
-  span.fa {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    top: -54px;
-    left: 50%;
-    font-size: 100px;
-    margin-left: -53px;
-    color: getColor('primary');
-    z-index: 100;
-  }
-
-  .clip {
-    position: absolute;
-    overflow: hidden;
-    width: 110px;
-    height: 57px;
-    top: 0;
-    left: 50%;
-    margin-left: -53px;
-
-    span.fa {
-      position: absolute;
-      top: 0;
-      font-size: 100px;
-      color: #f1f1f1;
-      margin-top: -54px;
-      margin-left: -55px;
-      z-index: 200;
-    }
-  }
-}
-
 .icons {
   text-align: center;
   a {

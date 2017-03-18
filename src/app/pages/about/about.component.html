@@ -9,36 +9,36 @@
       </strong></p>
     </div>
   </div>
-  <div class="container-fluid knowledge">
-    <div class="row future">
-      <div class="clip"><span class="fa fa-code" aria-hidden="true"></span></div>
-      <span class="fa fa-code" aria-hidden="true"></span>
-      <div class="row charts">
-        <div class="col-sm-offset-1 col-xs-12 col-sm-10">
-          <h2>Knowledge</h2>
-          <i
-            class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
-            aria-hidden="true"
-            *ngIf="loading">
-          </i>
-          <span class="sr-only lo"
-                *ngIf="loading">Loading...</span>
-          <ek-percentage *ngFor="let skill of skills"
-                         [percentage]="skill.percentage"
-                         [title]="skill.title"
-                         [description]="skill.description">
-          </ek-percentage>
-        </div>
+  <ek-highlight
+    icon="fa-code">
+    <div class="row charts">
+      <div class="col-sm-offset-1 col-xs-12 col-sm-10">
+        <i
+          class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
+          aria-hidden="true"
+          *ngIf="loading">
+        </i>
+        <span class="sr-only lo"
+              *ngIf="loading">Loading...</span>
+        <ek-percentage
+          *ngFor="let skill of skills"
+          [percentage]="skill.percentage"
+          [title]="skill.title"
+          [description]="skill.description">
+        </ek-percentage>
       </div>
     </div>
-  </div>
+  </ek-highlight>
   <div class="row details">
     <div class="col-sm-offset-1 col-lg-offset-1 col-xs-12 col-sm-5 col-lg-4 bio">
       <h2><span class="fa fa-info fa-fw" aria-hidden="true"></span> Bio</h2>
       <p>
         From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
-        he studied at the University of Applied Science of Arnhem and Nijmegen <a href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia Design</a>, focussing on front-end, usability and interaction design.
-        After his study Emiel worked as a front-end developer four years for <a href="http://tradepoint.nl">TradePoint</a>, working on brands like <a href="http://curves.nl">Curves Holland</a>.
+        he studied at the University of Applied Science of Arnhem and Nijmegen <a
+        href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia
+        Design</a>, focussing on front-end, usability and interaction design.
+        After his study Emiel worked as a front-end developer four years for <a
+        href="http://tradepoint.nl">TradePoint</a>, working on brands like <a href="http://curves.nl">Curves Holland</a>.
       </p>
     </div>
     <div class="col-sm-offset-1 col-lg-offset-2 col-xs-12 col-sm-5 col-lg-4 recruiter">

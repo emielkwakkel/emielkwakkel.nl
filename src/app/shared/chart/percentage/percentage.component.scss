@@ -126,7 +126,6 @@ $configs: (
     font-weight: 100;
     padding: 15px 0 0 0;
   }
-
 }
 
 /* ------- DO NOT EDIT BELOW --------- */
@@ -137,7 +136,6 @@ $labelData: '';
 }
 
 @each $chart, $config in $configs {
-  //
   $merged: map-merge($config, $default);
 
   $c: (map-get($merged, svgSize) - map-get($merged, strokeWidth)) * $pi;
@@ -197,7 +195,6 @@ $labelData: '';
         content: $labelData;
         white-space: pre;
         font-size: map-get($merged, labelFontSize);
-        font-weight: 300;
         line-height: map-get($merged, labelFontSize);
       }
     }
