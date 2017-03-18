@@ -19,7 +19,7 @@ article {
       }
       h3 {
         font-size: 20px;
-        font-weight:200;
+        font-weight: 200;
       }
       h4 {
         font-size: 25px;
@@ -59,13 +59,15 @@ typewriter {
   }
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width: 500px) {
   article {
-    -webkit-background-size:auto 60%;
+    -webkit-background-size: auto 60%;
     background-size: auto 60%;
   }
 }
+
 @include medium {
   article {
     background: none;
-  }}
+  }
+}
