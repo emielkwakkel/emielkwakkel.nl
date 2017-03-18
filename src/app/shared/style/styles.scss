@@ -15,10 +15,13 @@ p {
   line-height: 1.8em;
 }
 
-h1 span {
-  margin-left: -60px;
-  color: getThemeColor('indexHeadingIconText');
-  @include transition()
+h1 {
+  padding-top: 65px;
+  span {
+    margin-left: -60px;
+    color: getThemeColor('indexHeadingIconText');
+    @include transition()
+  }
 }
 
 @include extra-small {

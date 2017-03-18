@@ -51,6 +51,13 @@ typewriter {
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
 
+    // Keep background visible on smartphone landscape
+    @media only screen and (max-height: 400px) {
+      -webkit-background-size: auto 80%;
+      background-size: auto 80%;
+
+    }
+
     div {
       .heading {
         display: block;
