@@ -21,6 +21,12 @@ h2 {
     font-size: 20px;
   }
   @include transition();
+  @media(max-height: 400px) { padding: 30px 0; }
+  @media(max-height: 328px) { padding: 20px 0; }
+  @media(max-height: 260px) { padding: 12px 0; }
+  @include extra-small {
+    padding: 12px 0;
+  }
 }
 
 .nav > li > a {
@@ -43,42 +49,17 @@ h2 {
     background: getThemeColor('menuHoverBackground');
     color: getThemeColor('menuHoverColor');
   }
-}
 
-@include extra-small {
-  h2 {
-    padding: 12px 0;
-  }
-}
-
-@media(max-height:600px) {
-  .nav > li > a {
-    padding: 25px 15px;
-  }
-}
-
-@media(max-height:534px) {
-  .nav > li > a {
-    padding: 15px;
-  }
-}
-
-@media(max-height:440px) {
-  .nav > li > a {
+  @media(max-height: 600px) { padding: 25px 15px; }
+  @media(max-height: 534px) { padding: 15px; }
+  @media(max-height: 465px) {
     padding: 30px 15px;
     i {
       display: inline;
       font-size: 12px;
     }
   }
-}
-
-@media(max-height:400px) {
-  .nav > li > a {
-    padding: 15px;
-    i {
-      display: inline;
-      font-size: 12px;
-    }
-  }
+  @media(max-height: 400px) { padding: 20px; }
+  @media(max-height: 328px) { padding: 15px; }
+  @media(max-height: 260px) { padding: 10px; }
 }

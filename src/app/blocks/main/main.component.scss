@@ -14,10 +14,8 @@ section {
   // It sets touch-action to none, preventing vertical scrolling on mobile devices.
   touch-action: pan-y !important;
   overflow: scroll;
-}
 
-@include extra-small {
-  section {
+  @include extra-small {
     top: 60px;
     left: 0;
     padding-top: 30px;
