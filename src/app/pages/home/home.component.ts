@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
       'Amazon Echo',
       'Innovation',
       'HTML & (S)CSS',
-      'Working international',
       'JavaScript',
       'Ionic & Cordova',
       'Agile & Scrum',
