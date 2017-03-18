@@ -13,5 +13,4 @@ export class MainComponent {
   setShowSide(showSide) {
     this._blocksService.setShowSide(showSide);
   }
-
 }
