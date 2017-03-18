@@ -125,7 +125,7 @@ $configs: (
   h4 {
     text-align: center;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 300;
     padding: 15px 0 0 0;
   }
 }
@@ -196,6 +196,7 @@ $labelData: '';
         display: inline-block;
         content: $labelData;
         white-space: pre;
+        font-weight: 200;
         font-size: map-get($merged, labelFontSize);
         line-height: map-get($merged, labelFontSize);
       }
