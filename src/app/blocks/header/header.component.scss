@@ -4,8 +4,7 @@ header {
   position: absolute;
   top: 0;
   background: getThemeColor('headerBackground');
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  @include transition();
 
   &#top {
     height: 60px;
@@ -40,8 +39,7 @@ header {
       span {
         font-size: 20px;
       }
-      -webkit-transition: all .3s ease-out;
-      transition: all .3s ease-out;
+      @include transition();
     }
 
     &.side-hidden {
@@ -65,7 +63,7 @@ header {
     }
   }
 }
-@media(min-width:768px){
+@include small {
   #top {
     top: -60px;
   }

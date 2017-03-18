@@ -20,8 +20,7 @@ h2 {
   span {
     font-size: 20px;
   }
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  @include transition();
 }
 
 .nav > li > a {
@@ -30,8 +29,7 @@ h2 {
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  @include transition();
   &.active {
     background: getThemeColor('menuActiveBackground');
   }
@@ -47,7 +45,7 @@ h2 {
   }
 }
 
-@media(max-width:767px) {
+@include extra-small {
   h2 {
     padding: 12px 0;
   }

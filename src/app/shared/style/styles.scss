@@ -18,11 +18,10 @@ p {
 h1 span {
   margin-left: -60px;
   color: getThemeColor('indexHeadingIconText');
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  @include transition()
 }
 
-@media(max-width:767px) {
+@include extra-small {
   h1 span {
     margin-left: 0;
   }

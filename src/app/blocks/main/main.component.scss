@@ -9,27 +9,17 @@ section {
   padding-top: 100px;
   width: auto;
   background: getThemeColor('mainBackground');
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  @include transition();
   // hammerjs uses x-axis scrolling for swiping left / right.
   // It sets touch-action to none, preventing vertical scrolling on mobile devices.
   touch-action: pan-y !important;
   overflow: scroll;
 }
 
-@media(max-width: 767px) {
+@include extra-small {
   section {
     top: 60px;
     left: 0;
     padding-top: 30px;
   }
-}
-
-@media(min-width: 768px) {
-}
-
-@media(min-width: 992px) {
-}
-
-@media(min-width: 1200px) {
 }

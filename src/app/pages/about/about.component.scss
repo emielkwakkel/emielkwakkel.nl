@@ -30,7 +30,7 @@ ek-percentage {
   display: inline-block;
 }
 
-@media(max-width:767px){
+@include extra-small {
   ek-percentage {
     padding-right: 0;
   }
