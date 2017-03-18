@@ -1,12 +1,14 @@
+@import '../../shared/style/theme';
+
 .contact {
   h2 {
     display: none;
   }
   padding: 0 0 75px 0;
   margin: 100px 0 50px 0;
-  color: #f1f1f1;
+  color: getColor('background');
   z-index: 1;
-  background: #00ac84;
+  background: getColor('primary');
   width: 100%;
   position: relative;
 
@@ -18,7 +20,7 @@
     left: 50%;
     font-size: 100px;
     margin-left: -53px;
-    color: #00ac84;
+    color: getColor('primary');
     z-index: 100;
   }
 
@@ -47,28 +49,28 @@
   text-align: center;
   a {
     border-radius: 50% 50%;
-    background: #f1f1f1;
+    background: #fff;
     margin: 0 25px 25px 0;
     display: inline-block;
     -webkit-transition: background .2s ease-out;
     transition: background .2s ease-out;
     padding: 0;
-    &.twitter:hover { background: #1da1f3; }
-    &.github:hover { background: #333; }
-    &.linkedin:hover { background: #0077b5; }
-    &.facebook:hover { background: #3b5998; }
-    &.mail:hover { background: #333; }
-    &.sogeti:hover { background: #f15029; }
+    &.twitter:hover { background: getColor('twitter'); }
+    &.github:hover { background: getColor('github'); }
+    &.linkedin:hover { background: getColor('linkedin'); }
+    &.facebook:hover { background: getColor('facebook'); }
+    &.mail:hover { background: getColor('mail'); }
+    &.sogeti:hover { background: getColor('sogeti'); }
 
     .fa-stack {
       font-size: 50px;
       .fa-circle {
-        &.twitter { color: #1da1f3; }
-        &.github { color: #333; }
-        &.linkedin { color: #0077b5; }
-        &.facebook { color: #3b5998; }
-        &.mail { color: #333; }
-        &.sogeti { color: #f15029; }
+        &.twitter { color: getColor('twitter'); }
+        &.github { color: getColor('github'); }
+        &.linkedin { color: getColor('linkedin'); }
+        &.facebook { color: getColor('facebook'); }
+        &.mail { color: getColor('mail'); }
+        &.sogeti { color: getColor('sogeti'); }
       }
     }
   }
