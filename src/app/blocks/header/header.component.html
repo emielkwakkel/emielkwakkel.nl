@@ -1,18 +1,27 @@
-<header id="top"
-        [ngClass]="{'side-hidden': !showSide}"
-        (swipeleft)="setShowSide(false)"
-        (swiperight)="setShowSide(true)">
-  <button type="button" class="btn"
-          [(ngModel)]="showSide"
-          (click)="setShowSide(!showSide)"
-          ngDefaultControl>
-    <span class="glyphicon glyphicon-menu-hamburger"></span>
+<header
+  id="top"
+  [ngClass]="{'side-hidden': !showSide}"
+  (swipeleft)="setShowSide(false)"
+  (swiperight)="setShowSide(true)">
+  <button
+    type="button" class="btn"
+    [(ngModel)]="showSide"
+    (click)="setShowSide(!showSide)"
+    ngDefaultControl>
+    <div
+      class="hamburger"
+      [ngClass]="{'open': showSide}">
+      <div class="top"></div>
+      <div class="middle"></div>
+      <div class="bottom"></div>
+    </div>
   </button>
   <div class="logo"><span>Emiel</span> <br>Kwakkel</div>
 </header>
-<header id="side"
-        role="banner"
-        [ngClass]="{'side-hidden': !showSide}"
-        (swipeleft)="setShowSide(false)">
+<header
+  id="side"
+  role="banner"
+  [ngClass]="{'side-hidden': !showSide}"
+  (swipeleft)="setShowSide(false)">
   <ek-menu></ek-menu>
 </header>

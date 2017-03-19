@@ -68,3 +68,68 @@ header {
     }
   }
 }
+
+@keyframes openMenu {
+  0%   {}
+  25%  {}
+  50%  {
+    div.top {
+      margin-top: 10px;
+      background: red;
+    }
+  }
+  100% {
+    div.top {
+      margin-top: 0;
+      background: blue;
+    }
+  }
+}
+
+
+.hamburger {
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  div {
+    width: 28px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    &.top {
+      margin-top: 0;
+    }
+    &.middle {
+      margin-top: 10px;
+    }
+    &.bottom {
+      margin-top: 20px;
+    }
+  }
+  &.open {
+    div {
+      @include transition();
+      //animation-name: openMenu;
+      //animation-duration: 4s;
+      //animation-iteration-count: 1;
+      &.top {
+        margin-top: 10px;
+        -ms-transform: rotate(-45deg); /* IE 9 */
+        -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+        transform: rotate(-45deg);
+      }
+      &.middle {
+        display: none;
+      }
+      &.bottom {
+        margin-top: 10px;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
