@@ -44,7 +44,7 @@ header {
       span {
         font-size: 20px;
       }
-      @include transition();
+      @include transition(right);
     }
 
     &.side-hidden {
@@ -69,29 +69,12 @@ header {
   }
 }
 
-@keyframes openMenu {
-  0%   {}
-  25%  {}
-  50%  {
-    div.top {
-      margin-top: 10px;
-      background: red;
-    }
-  }
-  100% {
-    div.top {
-      margin-top: 0;
-      background: blue;
-    }
-  }
-}
-
-
 .hamburger {
   margin-top: 10px;
   width: 28px;
   height: 28px;
   div {
+    @include transition(transform);
     width: 28px;
     height: 5px;
     background: #fff;
@@ -111,10 +94,7 @@ header {
   }
   &.open {
     div {
-      @include transition();
-      //animation-name: openMenu;
-      //animation-duration: 4s;
-      //animation-iteration-count: 1;
+      @include transition(margin-top);
       &.top {
         margin-top: 10px;
         -ms-transform: rotate(-45deg); /* IE 9 */
