@@ -1,7 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { MissionComponent } from './mission.component';
 
@@ -11,7 +10,8 @@ describe('MissionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MissionComponent ]
+      declarations: [ MissionComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
