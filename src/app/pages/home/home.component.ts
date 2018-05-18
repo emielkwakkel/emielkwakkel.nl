@@ -14,15 +14,13 @@ export class HomeComponent implements OnInit {
     this.contents = this._typewriterService.format([
       'TypeScript',
       'Maureen',
-      'Angular 2',
-      'Amazon Echo',
+      'Angular',
       'Innovation',
+      'Chatbots',
       'HTML & (S)CSS',
-      'JavaScript',
       'Ionic & Cordova',
       'Agile & Scrum',
       'Arduino',
-      'Joomla',
       'Raspberry Pi']);
   }
 
