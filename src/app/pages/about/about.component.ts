@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FirebaseListObservable, AngularFire } from "angularfire2";
+import { AngularFirestore } from "@angular/fire/firestore";
 import { Subscription } from "rxjs";
 import { Skill } from "./skill.interface";
 
@@ -14,16 +14,16 @@ export class AboutComponent implements OnDestroy {
   subscribe: Subscription;
   loading: boolean = true;
 
-  constructor(private _firebase : AngularFire) {
-    this.subscribe = _firebase.database
-      .list('/skills')
-      .subscribe(skills => {
-        this.loading = false;
-        this.skills = skills;
-      });
+  constructor(private _firebase: AngularFirestore) {
+    // this.subscribe = _firebase.database
+    //   .list('/skills')
+    //   .subscribe(skills => {
+    //     this.loading = false;
+    //     this.skills = skills;
+    //   });
   }
 
   ngOnDestroy() {
-    this.subscribe.unsubscribe();
+    // this.subscribe.unsubscribe();
   }
 }

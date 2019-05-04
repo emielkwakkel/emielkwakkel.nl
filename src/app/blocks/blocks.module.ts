@@ -1,8 +1,8 @@
 // Modules
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from "@angular/router";
-import { FormsModule } from "@angular/forms";
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Components
 import { HeaderComponent } from './header/header.component';
