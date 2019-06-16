@@ -10,7 +10,7 @@
   <ul class="nav">
     <li *ngFor="let item of menuItems">
       <a [routerLink]="item.routerLink" routerLinkActive="active">
-        <i class="fa fa-fw" [ngClass]="item.iconClass" aria-hidden="true"></i>
+        <fa-icon [icon]="item.icon"></fa-icon>
         {{ item.text }}
       </a>
     </li>

@@ -10,7 +10,9 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 // Icons
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faHome } from '@fortawesome/free-solid-svg-icons';  // fas
+import { faHeart, faUserCircle, faComment } from '@fortawesome/free-regular-svg-icons'; // far
+
 
 // App modules
 import { PagesModule } from './pages/pages.module';
@@ -50,6 +52,6 @@ import { HammerConfig } from './hammer.config'
 export class AppModule {
   constructor() {
     // Add an icon to the library for convenient access in other components
-    library.add(faCoffee);
+    library.add(faCoffee, faHeart, faHome, faUserCircle, faComment);
   }
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Components
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +15,7 @@ import { BlocksService } from './blocks.service';
   imports: [
     CommonModule,
     FormsModule,
+    FontAwesomeModule,
     RouterModule.forChild([])
   ],
   declarations: [

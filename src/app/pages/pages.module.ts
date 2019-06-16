@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
@@ -16,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     SharedModule,
     CommonModule,
+    FontAwesomeModule,
     RouterModule.forChild([
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
@@ -24,6 +26,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: 'not-found', component: NotFoundComponent }
     ]),
   ],
-  declarations: [ AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent ],
+  declarations: [ AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent ]
 })
 export class PagesModule { }

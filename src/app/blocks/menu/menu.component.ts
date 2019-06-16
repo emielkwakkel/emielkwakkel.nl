@@ -7,21 +7,21 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent{
   menuItems = [{
-    "iconClass": "fa-home",
-    "routerLink": ["/home"],
-    "text": "Home"
+    icon: ['fas', 'home'],
+    routerLink: ['/home'],
+    text: 'Home'
   }, {
-    "iconClass": "fa-user-circle-o",
-    "routerLink": ["/about"],
-    "text": "About"
+    icon: ['far', 'user-circle'],
+    routerLink: ['/about'],
+    text: 'About',
   }, {
-    "iconClass": "fa-heart-o",
-    "routerLink": ["/mission"],
-    "text": "Mission"
+    icon: ['far', 'heart'],
+    routerLink: ['/mission'],
+    text: 'Mission',
   }, {
-    "iconClass": "fa-comment-o",
-    "routerLink": ["/contact"],
-    "text": "Contact"
+    icon: ['far', 'comment'],
+    routerLink: ['/contact'],
+    text: 'Contact',
   }];
 
   constructor() {}
