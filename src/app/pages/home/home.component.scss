@@ -3,6 +3,11 @@
 article {
   width: 100%;
   height: 100%;
+  background: url('/assets/images/emielkwakkel-rabo.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   @include transition();
   div {
     height: 100%;
@@ -17,6 +22,7 @@ article {
       h2 {
         font-size: 50px;
         margin: 0;
+        color: getThemeColor('homeNameText');
       }
       h3 {
         font-size: 20px;
@@ -28,6 +34,7 @@ article {
     }
     .me {
       position: absolute;
+
       bottom: 0;
       max-height: 100%;
       max-width: 100%;
@@ -36,18 +43,13 @@ article {
   }
 }
 
-typewriter {
-  display: inline-block;
-  color: getThemeColor('homeTypewriterText');
-}
-
 .glyphicon-heart-empty {
   color: getThemeColor('homeHeartText');
 }
 
 @include extra-small {
   article {
-    background: url('/assets/images/emielkwakkel.png') no-repeat right bottom fixed;
+    background: url('/assets/images/emielkwakkel-rabo.jpg') no-repeat right bottom fixed;
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
 
@@ -77,6 +79,5 @@ typewriter {
 
 @include medium {
   article {
-    background: none;
   }
 }

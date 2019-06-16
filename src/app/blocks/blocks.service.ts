@@ -1,4 +1,4 @@
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { BehaviorSubject } from 'rxjs';
 import { State } from "./blocks.interface";
 
 const state: State = {
@@ -10,8 +10,8 @@ const store = new BehaviorSubject<State>(state);
 export class BlocksService {
   store = store;
   changes = store
-    .asObservable()
-    .distinctUntilChanged();
+    .asObservable();
+    // .distinctUntilChanged();
 
   getState() {
     return this.store.value;

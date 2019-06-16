@@ -1,12 +1,18 @@
 // Core modules
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AlertModule } from 'ng2-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { AngularFireModule } from 'angularfire2';
+
+// Icons
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee, faHome } from '@fortawesome/free-solid-svg-icons';  // fas
+import { faHeart, faUserCircle, faComment } from '@fortawesome/free-regular-svg-icons'; // far
+
 
 // App modules
 import { PagesModule } from './pages/pages.module';
@@ -16,10 +22,7 @@ import { BlocksModule } from './blocks/blocks.module';
 import { AppComponent } from './app.component';
 
 // Configs
-import { firebaseConfig } from './firebase.config';
 import { HammerConfig } from './hammer.config'
-
-
 
 @NgModule({
   declarations: [
@@ -28,15 +31,15 @@ import { HammerConfig } from './hammer.config'
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full'},
-      { path: '**', redirectTo: 'not-found'},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '**', redirectTo: 'not-found' },
     ]),
     FormsModule,
-    HttpModule,
+    FontAwesomeModule,
+    HttpClientModule,
     PagesModule,
     BlocksModule,
     AlertModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [
     {
@@ -45,6 +48,10 @@ import { HammerConfig } from './hammer.config'
     }
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    // Add an icon to the library for convenient access in other components
+    library.add(faCoffee, faHeart, faHome, faUserCircle, faComment);
+  }
+}

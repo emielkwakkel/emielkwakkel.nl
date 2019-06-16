@@ -1,5 +1,5 @@
 export interface MenuItem {
   routerLink: any[],
-  iconClass: string,
+  icon: string[],
   text: string
 }

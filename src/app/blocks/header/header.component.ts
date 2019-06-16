@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { BlocksService } from "../blocks.service";
-import 'rxjs/Rx';
-import { Subscription } from "rxjs";
+import { Subscription } from 'rxjs';
+import { pluck } from 'rxjs/operators';
 
 @Component({
   selector: 'ek-header',
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private _blocksService: BlocksService) {
     this._subscription = this._blocksService
       .changes
-      .pluck('showSide')
+      .pipe(pluck('showSide'))
       .subscribe((showSide: boolean) => this._showSide = showSide);
   }
 

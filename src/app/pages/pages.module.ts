@@ -1,7 +1,7 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TypewriterModule } from 'ng2-typewriter';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
@@ -17,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     SharedModule,
     CommonModule,
+    FontAwesomeModule,
     RouterModule.forChild([
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
@@ -24,9 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: 'mission', component: MissionComponent },
       { path: 'not-found', component: NotFoundComponent }
     ]),
-    TypewriterModule
   ],
-  declarations: [AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  declarations: [ AboutComponent, ContactComponent, MissionComponent, HomeComponent, NotFoundComponent ]
 })
 export class PagesModule { }
