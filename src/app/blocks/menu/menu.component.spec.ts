@@ -3,14 +3,12 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { MenuComponent } from './menu.component';
 import { FormsModule } from "@angular/forms";
 import { BlocksService } from "../blocks.service";
-import { RouterModule, Router, ActivatedRoute } from "@angular/router";
-import { AngularFire, AngularFireModule } from "angularfire2";
+import { RouterModule, Router } from "@angular/router";
 
 fdescribe('MenuComponent', () => {
   let component: MenuComponent;
@@ -20,21 +18,12 @@ fdescribe('MenuComponent', () => {
     navigate = jasmine.createSpy('navigate');
   }
 
-  const mockFirebaseConfig = {
-    apiKey: 'asdfasdfasdfasdfasdf',
-    authDomain: 'https://test.firebaseio.com',
-    databaseURL: 'https://test.firebaseio.com',
-    storageBucket: 'storage.com',
-    messagingSenderId: '123412341234'
-  };
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MenuComponent ],
       imports: [
         FormsModule,
         RouterModule.forChild([]),
-        AngularFireModule.initializeApp(mockFirebaseConfig)
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       providers: [
@@ -43,7 +32,6 @@ fdescribe('MenuComponent', () => {
           provide: Router,
           useValue: MockRouter
         },
-        AngularFire
       ]
     })
     .compileComponents();

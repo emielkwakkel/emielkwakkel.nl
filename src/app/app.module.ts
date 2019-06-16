@@ -6,8 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { AngularFireModule, } from '@angular/fire';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 // App modules
 import { PagesModule } from './pages/pages.module';
@@ -17,7 +15,6 @@ import { BlocksModule } from './blocks/blocks.module';
 import { AppComponent } from './app.component';
 
 // Configs
-import { firebaseConfig } from './firebase.config';
 import { HammerConfig } from './hammer.config'
 
 @NgModule({
@@ -35,10 +32,8 @@ import { HammerConfig } from './hammer.config'
     PagesModule,
     BlocksModule,
     AlertModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [
-    AngularFirestore,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: HammerConfig

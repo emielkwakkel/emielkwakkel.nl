@@ -1,6 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
-import { AngularFirestore } from "@angular/fire/firestore";
-import { Subscription } from "rxjs";
+import { Component } from '@angular/core';
 import { Skill } from "./skill.interface";
 
 @Component({
@@ -8,22 +6,24 @@ import { Skill } from "./skill.interface";
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnDestroy {
-  // skills: FirebaseListObservable<Skill[]>;
-  skills: any;
-  subscribe: Subscription;
-  loading: boolean = true;
+export class AboutComponent {
+  skills: Skill[] = [{
+    "description": "Teaches AngularJS at Sogeti and works fulltime using Angular",
+    "percentage": 85,
+    "title": "Angular & AngularJS"
+  }, {
+    "description": "Getting comfortable on typing all the way.",
+    "percentage": 75,
+    "title": "TypeScript"
+  }, {
+    "description": "Uses GIT for versioning within teams.",
+    "percentage": 90,
+    "title": "GIT"
+  }, {
+    "description": "Uses Ionic and Cordova for building hybrid web applications",
+    "percentage": 80,
+    "title": "Ionic & Cordova"
+  }];
 
-  constructor(private _firebase: AngularFirestore) {
-    // this.subscribe = _firebase.database
-    //   .list('/skills')
-    //   .subscribe(skills => {
-    //     this.loading = false;
-    //     this.skills = skills;
-    //   });
-  }
-
-  ngOnDestroy() {
-    // this.subscribe.unsubscribe();
-  }
+  constructor() {}
 }
