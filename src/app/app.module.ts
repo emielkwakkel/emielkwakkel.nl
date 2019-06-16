@@ -7,6 +7,11 @@ import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
+// Icons
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 // App modules
 import { PagesModule } from './pages/pages.module';
 import { BlocksModule } from './blocks/blocks.module';
@@ -28,6 +33,7 @@ import { HammerConfig } from './hammer.config'
       { path: '**', redirectTo: 'not-found' },
     ]),
     FormsModule,
+    FontAwesomeModule,
     HttpClientModule,
     PagesModule,
     BlocksModule,
@@ -41,4 +47,9 @@ import { HammerConfig } from './hammer.config'
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    // Add an icon to the library for convenient access in other components
+    library.add(faCoffee);
+  }
+}
