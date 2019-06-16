@@ -13,13 +13,6 @@
     icon="fa-code">
     <div class="row charts">
       <div class="col-sm-offset-1 col-xs-12 col-sm-10">
-        <i
-          class="fa fa-spinner fa-pulse fa-3x fa-fw loading"
-          aria-hidden="true"
-          *ngIf="loading">
-        </i>
-        <span class="sr-only lo"
-              *ngIf="loading">Loading...</span>
         <ek-percentage
           *ngFor="let skill of skills"
           [percentage]="skill.percentage"
@@ -36,7 +29,7 @@
         From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
         He studied at the University of Applied Science of Arnhem and Nijmegen <a
         href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia
-        Design</a>. After four years of working internally for TradePoint as a front-end developer Emiel joined Sogeti 
+        Design</a>. After four years of working internally for TradePoint as a front-end developer Emiel joined Sogeti
         as a senior front-end developer. He worked for International Card Services and is currently working for Rabobank.
       </p>
     </div>

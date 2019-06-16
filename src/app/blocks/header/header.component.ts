@@ -9,7 +9,7 @@ import { pluck } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private _showSide: boolean;
+  private _showSide: boolean = true;
   private _subscription : Subscription;
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
