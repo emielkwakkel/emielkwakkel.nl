@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Skill } from "./skill.interface";
+import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-about',
@@ -7,6 +9,7 @@ import { Skill } from "./skill.interface";
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  age: number = moment().diff('01-Feb-1989', 'years');
   skills: Skill[] = [{
     "description": "Teaches AngularJS at Sogeti and works fulltime using Angular",
     "percentage": 85,
