@@ -9,7 +9,7 @@ import * as moment from 'moment';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  age: number = moment().diff('01-Feb-1989', 'years');
+  age: number = moment().diff('1989-02-01T00:00:00.000Z', 'years');
   skills: Skill[] = [{
     "description": "Teaches AngularJS at Sogeti and works fulltime using Angular",
     "percentage": 85,

@@ -1,20 +1,22 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HighlightComponent } from './highlight/highlight.component';
 import { PercentageComponent } from './chart/percentage/percentage.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule,
   ],
   declarations: [
     HighlightComponent,
-    PercentageComponent
+    PercentageComponent,
   ],
   exports: [
     HighlightComponent,
-    PercentageComponent
+    PercentageComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

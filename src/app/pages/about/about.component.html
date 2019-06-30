@@ -1,16 +1,16 @@
 <article>
   <div class="row about">
     <div class="col-sm-offset-1 col-xs-12 col-sm-8 col-md-6">
-      <h1><span class="fa fa-user-circle-o fa-fw" aria-hidden="true"></span> Who is that guy?</h1>
+      <h1><fa-icon [icon]="['far', 'user-circle']" aria-hidden="true"></fa-icon> Who is that guy?</h1>
       <p><strong>
-        Good question! Emiel is Dutch, {{ age }} years old and currently living in Apeldoorn, Netherlands.
-        Emiel works for Sogeti as a Front-End Engineer, and teaches a three day Angular course.
-        Besides that he is active member of the Sogeti front-end community, organising monthly meetups.
+        Good question! Emiel is Dutch, {{ age }} years old, living in Apeldoorn, Netherlands.
+        Emiel works for Sogeti as an Expert Front-End Developer, and teaches a three day Angular course.
+        Besides that he the lead of the Sogeti frontend guild, organising monthly meetups.
       </strong></p>
     </div>
   </div>
   <ek-highlight
-    icon="fa-code">
+    [icon]="['fas', 'code']">
     <div class="row charts">
       <div class="col-sm-offset-1 col-xs-12 col-sm-10">
         <ek-percentage
@@ -24,7 +24,7 @@
   </ek-highlight>
   <div class="row details">
     <div class="col-sm-offset-1 col-lg-offset-1 col-xs-12 col-sm-5 col-lg-4 bio">
-      <h2><span class="fa fa-info fa-fw" aria-hidden="true"></span> Bio</h2>
+      <h2><fa-icon [icon]="['fas', 'info-circle']" aria-hidden="true"></fa-icon> Bio</h2>
       <p>
         From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
         He studied at the University of Applied Science of Arnhem and Nijmegen <a
@@ -34,7 +34,7 @@
       </p>
     </div>
     <div class="col-sm-offset-1 col-lg-offset-2 col-xs-12 col-sm-5 col-lg-4 recruiter">
-      <h2><span class="fa fa-warning fa-fw" aria-hidden="true"></span> I'm a recruiter and... </h2>
+      <h2><fa-icon [icon]="['fas', 'exclamation-triangle']" aria-hidden="true" class="warning"></fa-icon> I'm a recruiter and... </h2>
       <p>I'm sorry, I'm not in the market for switching carriers.</p>
     </div>
   </div>

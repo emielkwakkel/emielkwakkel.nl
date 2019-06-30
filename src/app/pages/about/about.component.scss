@@ -12,14 +12,15 @@ ek-highlight {
   }
 }
 
-.fa-warning {
+.warning {
   color: getThemeColor('aboutIconWarning');
+  font-size: 27px;
 }
 
 .details {
   margin-bottom: 75px;
   h2 {
-    margin-left: -48px;
+    margin-left: -40px;
   }
 }
 
