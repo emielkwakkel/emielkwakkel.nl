@@ -14,16 +14,16 @@
   .charts {
     text-align: center;
   }
-  span.fa {
+  fa-icon {
     position: relative;
     width: 100px;
     height: 100px;
-    top: -79px;
+    top: -85px;
     @include extra-small {
       top: -54px;
     }
     left: 50%;
-    font-size: 100px;
+    font-size: 85px;
     margin-left: -53px;
     color: getThemeColor('highlightBackground');
     z-index: 100;
@@ -38,12 +38,12 @@
     left: 50%;
     margin-left: -53px;
 
-    span.fa {
+    fa-icon {
       position: absolute;
       top: 0;
-      font-size: 100px;
+      font-size: 85px;
       color: getThemeColor('highlightText');
-      margin-top: -54px;
+      margin-top: -60px;
       margin-left: -55px;
       z-index: 200;
     }
