@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
+import 'hammerjs';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 // Icons
