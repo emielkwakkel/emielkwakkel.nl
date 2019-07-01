@@ -5,24 +5,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
-import 'hammerjs';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import 'hammerjs';
 
 // Icons
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee, faHome, faCode, faInfoCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';  // fas
+import { faCoffee, faHome, faCode, faInfoCircle, faEnvelope, faExclamationTriangle, faSpinner, faCircle } from '@fortawesome/free-solid-svg-icons';  // fas
 import { faHeart, faUserCircle, faComment, faLightbulb } from '@fortawesome/free-regular-svg-icons'; // far
+import { faGithub, faTelegramPlane, faTwitter, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 
-// App modules
+// App
 import { PagesModule } from './pages/pages.module';
 import { BlocksModule } from './blocks/blocks.module';
-
-// Components
 import { AppComponent } from './app.component';
 
-// Configs
+// Configuration
 import { HammerConfig } from './hammer.config'
 
 @NgModule({
@@ -54,12 +53,20 @@ export class AppModule {
   constructor() {
     // Add an icon to the library for convenient access in other components
     library.add(
+      faCircle,
       faCode,
       faCoffee,
       faComment,
+      faEnvelope,
       faExclamationTriangle,
+      faFacebook,
+      faGithub,
       faHeart,
       faHome,
+      faLinkedin,
+      faTwitter,
+      faSpinner,
+      faTelegramPlane,
       faInfoCircle,
       faLightbulb,
       faUserCircle,

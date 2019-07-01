@@ -19,9 +19,9 @@
     &.mail:hover      { background: getColor('mail'); }
     &.sogeti:hover    { background: getColor('sogeti'); }
 
-    .fa-stack {
+    fa-layers {
       font-size: 50px;
-      .fa-circle {
+      fa-icon.circle {
         &.twitter     { color: getColor('twitter'); }
         &.github      { color: getColor('github'); }
         &.linkedin    { color: getColor('linkedin'); }

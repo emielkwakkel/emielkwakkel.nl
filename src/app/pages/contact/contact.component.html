@@ -7,54 +7,53 @@
     </div>
   </div>
   <ek-highlight
-    icon="fa-paper-plane-o">
+    [icon]="['fab', 'telegram-plane']">
     <div class="row">
       <div class="col-sm-offset-1 col-xs-12 col-sm-10">
         <div class="icons">
           <a href="https://github.com/emielkwakkel" class="github">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x github"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle github" transform="grow-10"></fa-icon>
+              <fa-icon [icon]="['fab', 'github']" style="color: #fff"></fa-icon>
+            </fa-layers>
           </a>
 
           <a href="https://twitter.com/ekwakkel" class="twitter">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x twitter"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle twitter" transform="grow-10"></fa-icon>
+              <fa-icon [icon]="['fab', 'twitter']" style="color:#fff;"></fa-icon>
+            </fa-layers>
           </a>
 
           <a href="https://www.linkedin.com/in/emielkwakkel/" class="linkedin">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x linkedin"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle linkedin" transform="grow-10"></fa-icon>
+              <fa-icon [icon]="['fab', 'linkedin']" style="color:#fff;"></fa-icon>
+            </fa-layers>
           </a>
 
           <a href="http://facebook.com/emiel.kwakkel" class="facebook">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x facebook"></i>
-                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle facebook" transform="grow-10"></fa-icon>
+              <fa-icon [icon]="['fab', 'facebook']" style="color:#fff;"></fa-icon>
+            </fa-layers>
           </a>
 
           <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#109;&#x61;&#105;&#x6c;&#x40;&#101;&#109;&#105;&#x65;&#x6c;&#x6b;&#119;&#x61;&#x6b;&#x6b;&#x65;&#108;&#46;&#x6e;&#x6c;&#x3f;&#115;&#x75;&#98;&#106;&#x65;&#x63;&#x74;&#x3d;&#67;&#x6f;&#110;&#116;&#97;&#x63;&#116;&#32;&#118;&#105;&#x61;&#x20;&#x77;&#101;&#x62;&#x73;&#x69;&#116;&#x65;" class="mail">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x mail"></i>
-                <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle mail" transform="grow-10"></fa-icon>
+              <fa-icon [icon]="['fas', 'envelope']" style="color:#fff;"></fa-icon>
+            </fa-layers>
           </a>
 
           <a href="https://sogeti.nl" class="sogeti">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x sogeti"></i>
-                <svg class="fa fa-stack-2x fa-inverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
-                     style="width:98px;">
-                  <path id="path16" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;"
-                        d="M 189.024 324.231 C 188.633 322.832 188.88 321.521 189.998 321.173 C 206.782 315.931 220.89 304.4 231.088 285.502 C 231.115 285.468 230.402 284.508 230.213 284.655 C 208.476 300.81 201.268 302.069 189.27 303.726 C 180.012 304.998 170.61 303.477 161.625 300.459 C 147.929 295.85 135.73 286.031 131.16 271.612 C 128.549 263.366 128.283 254.107 131.171 245.687 C 133.264 239.571 136.666 234.208 141.676 229.809 C 151.26 221.384 162.163 217.796 173.979 214.696 C 180.595 212.964 187.152 211.683 193.658 210.399 L 193.484 210.436 C 226.946 203.357 234.51 202.607 250.002 175.769 C 265.494 202.607 273.058 203.357 306.509 210.436 L 306.346 210.399 C 312.846 211.683 319.417 212.964 326.025 214.696 C 337.838 217.796 348.751 221.384 358.321 229.809 C 363.334 234.208 366.738 239.571 368.833 245.687 C 371.717 254.107 371.443 263.366 368.851 271.612 C 364.27 286.031 352.075 295.85 338.377 300.459 C 329.39 303.477 319.989 304.998 310.723 303.726 C 298.737 302.069 291.537 300.81 269.799 284.655 C 269.598 284.508 268.89 285.468 268.915 285.502 C 279.11 304.4 293.211 315.931 309.995 321.173 C 311.133 321.521 311.379 322.832 310.977 324.231 L 189.024 324.231 L 189.024 324.231"/>
-                </svg>
-              </span>
+            <fa-layers [fixedWidth]="true">
+              <fa-icon [icon]="['fas', 'circle']" class="circle sogeti" transform="grow-10"></fa-icon>
+              <svg class="sogeti-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="width:50px;">
+                <path id="path16" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;"
+                  d="M 189.024 324.231 C 188.633 322.832 188.88 321.521 189.998 321.173 C 206.782 315.931 220.89 304.4 231.088 285.502 C 231.115 285.468 230.402 284.508 230.213 284.655 C 208.476 300.81 201.268 302.069 189.27 303.726 C 180.012 304.998 170.61 303.477 161.625 300.459 C 147.929 295.85 135.73 286.031 131.16 271.612 C 128.549 263.366 128.283 254.107 131.171 245.687 C 133.264 239.571 136.666 234.208 141.676 229.809 C 151.26 221.384 162.163 217.796 173.979 214.696 C 180.595 212.964 187.152 211.683 193.658 210.399 L 193.484 210.436 C 226.946 203.357 234.51 202.607 250.002 175.769 C 265.494 202.607 273.058 203.357 306.509 210.436 L 306.346 210.399 C 312.846 211.683 319.417 212.964 326.025 214.696 C 337.838 217.796 348.751 221.384 358.321 229.809 C 363.334 234.208 366.738 239.571 368.833 245.687 C 371.717 254.107 371.443 263.366 368.851 271.612 C 364.27 286.031 352.075 295.85 338.377 300.459 C 329.39 303.477 319.989 304.998 310.723 303.726 C 298.737 302.069 291.537 300.81 269.799 284.655 C 269.598 284.508 268.89 285.468 268.915 285.502 C 279.11 304.4 293.211 315.931 309.995 321.173 C 311.133 321.521 311.379 322.832 310.977 324.231 L 189.024 324.231 L 189.024 324.231" />
+              </svg>
+            </fa-layers>
           </a>
         </div>
       </div>
