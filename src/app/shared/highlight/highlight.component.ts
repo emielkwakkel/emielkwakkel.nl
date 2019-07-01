@@ -1,13 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ek-highlight',
   templateUrl: './highlight.component.html',
   styleUrls: ['./highlight.component.scss']
 })
-export class HighlightComponent implements OnInit {
+export class HighlightComponent {
   @Input() icon : string;
-  ngOnInit() {
-    console.log('icon', this.icon)
-  }
 }
