@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Icon, icon } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-mission',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./mission.component.scss']
 })
 export class MissionComponent {
+  public icons: { [key: string]: Icon } = {
+    heart: icon({ prefix: 'far', iconName: 'heart'}),
+    lightbulb: icon({ prefix: 'far', iconName: 'lightbulb'}),
+  };
 }

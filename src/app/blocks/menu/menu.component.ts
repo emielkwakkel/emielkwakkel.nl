@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MenuItem } from './menu.interface';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+
 
 @Component({
   selector: 'ek-menu',
@@ -6,20 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['menu.component.scss']
 })
 export class MenuComponent{
-  menuItems = [{
-    icon: ['fas', 'home'],
+  menuItems: MenuItem[] = [{
+    icon: icon({ prefix: 'fas', iconName: 'home'}),
     routerLink: ['/home'],
     text: 'Home'
   }, {
-    icon: ['far', 'user-circle'],
+    icon: icon({ prefix: 'far', iconName: 'user-circle'}),
     routerLink: ['/about'],
     text: 'About',
   }, {
-    icon: ['far', 'heart'],
+    icon: icon({ prefix: 'far', iconName: 'heart'}),
     routerLink: ['/mission'],
     text: 'Mission',
   }, {
-    icon: ['far', 'comment'],
+    icon: icon({ prefix: 'far', iconName: 'comment'}),
     routerLink: ['/contact'],
     text: 'Contact',
   }];

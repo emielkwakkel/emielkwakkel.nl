@@ -1,40 +1,35 @@
 <article>
   <div class="row about">
     <div class="col-sm-offset-1 col-xs-12 col-sm-8 col-md-6">
-      <h1><fa-icon [icon]="['far', 'user-circle']" aria-hidden="true"></fa-icon> Who is that guy?</h1>
+      <h1>
+        <fa-icon [icon]="icons.userCircle" aria-hidden="true"></fa-icon> Who is that guy?</h1>
       <p><strong>
-        Good question! Emiel is Dutch, {{ age }} years old, living in Apeldoorn, Netherlands.
-        Emiel works for Sogeti as an Expert Front-End Developer, and teaches a three day Angular course.
-        Besides that he the lead of the Sogeti frontend guild, organising monthly meetups.
+        Good question! Emiel is the Frontend Lead of Sogeti Netherlands. He won the title Sogetist of the Year in 2020.
+        As Frontend Lead Emiel is responsible for the frontend expertise within Sogeti, together with the Sogeti Frontend Core Team.
+        He is organiser of over 20 <a href="https://www.meetup.com/sogeti-frontend/">Frontend Meetups</a>.
       </strong></p>
     </div>
   </div>
-  <ek-highlight
-    [icon]="['fas', 'code']">
+  <ek-highlight [icon]="icons.code">
     <div class="row charts">
       <div class="col-sm-offset-1 col-xs-12 col-sm-10">
-        <ek-percentage
-          *ngFor="let skill of skills"
-          [percentage]="skill.percentage"
-          [title]="skill.title"
-          [description]="skill.description">
+        <ek-percentage *ngFor="let skill of skills" [percentage]="skill.percentage" [title]="skill.title" [description]="skill.description">
         </ek-percentage>
       </div>
     </div>
   </ek-highlight>
   <div class="row details">
     <div class="col-sm-offset-1 col-lg-offset-1 col-xs-12 col-sm-5 col-lg-4 bio">
-      <h2><fa-icon [icon]="['fas', 'info-circle']" aria-hidden="true"></fa-icon> Bio</h2>
+      <h2>
+        <fa-icon [icon]="icons.infoCircle" aria-hidden="true"></fa-icon> Bio</h2>
       <p>
-        From a young age Emiel was already fascinated by the possibilities of the digitally connected world.
-        He studied at the University of Applied Science of Arnhem and Nijmegen <a
-        href="https://www.han.nl/opleidingen/bachelor/communicatie-multimedia-design/vt/">Communication and Multimedia
-        Design</a>. After four years of working internally for TradePoint as a front-end developer Emiel joined Sogeti
-        as a senior front-end developer. He worked for International Card Services and is currently working for Rabobank.
+        From a young age Emiel was already fascinated by the possibilities of the digitally connected world. He studied at the University of Applied Science of Arnhem and Nijmegen <a href="https://www.han.nl/opleidingen/hbo/communication-multimedia-design/voltijd/">Communication and Multimedia
+        Design</a>. After four years of working for TradePoint as a frontend developer Emiel joined Sogeti. He worked for International Card Services, Rabobank and his current assignment is at the Dutch Police.
       </p>
     </div>
     <div class="col-sm-offset-1 col-lg-offset-2 col-xs-12 col-sm-5 col-lg-4 recruiter">
-      <h2><fa-icon [icon]="['fas', 'exclamation-triangle']" aria-hidden="true" class="warning"></fa-icon> I'm a recruiter and... </h2>
+      <h2>
+        <fa-icon [icon]="icons.exclamationTriangle" aria-hidden="true" class="warning"></fa-icon> I'm a recruiter and... </h2>
       <p>I'm sorry, I'm not in the market for switching carriers.</p>
     </div>
   </div>

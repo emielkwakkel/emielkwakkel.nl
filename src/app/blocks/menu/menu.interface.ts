@@ -1,5 +1,7 @@
+import { Icon } from "@fortawesome/fontawesome-svg-core";
+
 export interface MenuItem {
   routerLink: any[],
-  icon: string[],
+  icon: Icon,
   text: string
 }
