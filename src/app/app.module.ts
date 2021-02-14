@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { RouterModule } from '@angular/router';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { HammerModule} from '@angular/platform-browser';
 import 'hammerjs';
 
 // Icons
@@ -36,6 +37,7 @@ import { HammerConfig } from './hammer.config'
     ]),
     FormsModule,
     FontAwesomeModule,
+    HammerModule,
     HttpClientModule,
     PagesModule,
     BlocksModule,
