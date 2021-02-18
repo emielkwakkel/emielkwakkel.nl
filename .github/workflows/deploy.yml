@@ -14,4 +14,4 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd ${{ secrets.BASE_PATH }}/emielkwakkel.nl/public_html && git pull && npm install && npm build
+          script: cd ${{ secrets.BASE_PATH }} && git pull && npm install && npm build
