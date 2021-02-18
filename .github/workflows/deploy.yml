@@ -20,4 +20,4 @@ jobs:
             cd ${{ secrets.BASE_PATH }}
             git pull
             npm install
-            npm build
+            npm run build
