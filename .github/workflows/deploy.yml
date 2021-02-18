@@ -14,4 +14,10 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: cd ${{ secrets.BASE_PATH }} && git pull && npm install && npm build
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd ${{ secrets.BASE_PATH }}
+            git pull
+            npm install
+            npm build
