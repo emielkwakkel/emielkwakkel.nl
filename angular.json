@@ -15,8 +15,9 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
+            "extraWebpackConfig": "./webpack.config.js",
             "outputPath": "dist/emielkwakkel",
             "index": "src/index.html",
             "main": "src/main.ts",
