@@ -1,12 +1,15 @@
-const { StatsWriterPlugin } = require("webpack-stats-plugin");
-console.log(new StatsWriterPlugin());
+const { Stats } = require("webpack");
+const fs = require("fs");
+
 module.exports = {
   plugins: [
-    new StatsWriterPlugin({
-      stats: {
-        all: true,
-        assets: true,
+    {
+      apply: (compiler) => {
+        compiler.hooks.done.tap("StatsPlugin", (stats) => {
+          const statsJSON = stats.toJson(outputOptions);
+          fs.writeFileSync("stats.json", JSON.stringify(statsJSON, null, 2));
+        });
       },
-    }),
+    },
   ],
 };
