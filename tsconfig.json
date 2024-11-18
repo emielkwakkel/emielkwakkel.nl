@@ -1,5 +1,9 @@
 {
   "compileOnSave": false,
+  "exclude": [
+    "src/app/firebase.config.ts",
+    "src/environments/environment.prod.ts"
+  ],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
